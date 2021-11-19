@@ -1,0 +1,54 @@
+section.section.product-section 
+	.container 
+		.catelog-slide
+			.swiper-container
+				.swiper-wrapper
+					-for(i=1; i<10; i++)
+						.swiper-slide
+							.slide-inner
+								.icon 
+									img(src="./images/icons/i-"+i+".png", alt="")
+								.content 
+									span Điện thoại
+			.swiper-button-next
+			.swiper-button-prev 
+		.flash-sale
+			h2.title.title_small ⚡️ Flash SALE
+			.pro-flash
+				.swiper-container
+					.swiper-wrapper
+						-for(i=1; i<9; i++)
+							.swiper-slide
+									a(href="") 
+										.item-pro 
+											.img
+												img(src="./images/f-"+i+".png", alt="")
+											.infor
+												.name CASIO GW1000
+												.price 1.500.000
+				.swiper-button-next
+		.product-hot
+			h2.title.title_small 🔥 Sản phẩm HOT
+			.pro-hot
+				.swiper-container
+					.swiper-wrapper
+						-for(i=1; i<5; i++)
+							.swiper-slide
+								.item-pro 
+									.img
+										a(href="") 
+											img(src="./images/h-"+i+".png", alt="")
+										.sale-off 
+											span -20%
+									.infor
+										a.name(href="") iPhone 12 Pro Max with Facetome 256GB Pacifi....
+										.price 30.999.000
+										.icon 
+											a(href="") 
+												span.lnr.lnr-cart
+											a(href="") 
+												span.lnr.lnr-heart
+				.swiper-button-next
+				//- .swiper-button-prev
+			a.btn-viewmore(href="") 
+				span Tất cả sản phẩm

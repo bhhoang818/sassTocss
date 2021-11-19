@@ -1,0 +1,54 @@
+.new-hdbank
+	.new-slide
+		position: relative
+		.slide-inner
+			position: relative
+			filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.12))
+			backdrop-filter: blur(18px)
+			.img
+				+img-ratio(450/365)
+				img
+					border-radius: 16px
+			.wrap-content
+				padding: 24px 32px
+				position: absolute
+				bottom: 0
+				left: 0
+				display: flex
+				flex-direction: column
+				.name
+					font-weight: bold
+					font-size: 14px
+					line-height: 20px
+					color: #FFFFFF
+					margin-bottom: 12px
+				.detail
+					position: relative
+					font-weight: 500
+					font-size: 12px
+					line-height: 18px
+					color: #F9FAFC
+					width: max-content
+					&::after
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						right: -30px
+						content: '\f1df'
+						font-family: Material Icons
+						font-size: r(20px)
+						color: $black
+						width: 24px
+						height: 24px
+						background: $yellow
+						border-radius: 50%
+						display: flex
+						align-items: center
+						justify-content: center
+		.swiper-button-next,
+		.swiper-button-prev
+			border: 1px solid $black
+			&::before
+				color: $black
+			&:hover
+				background: $gray
