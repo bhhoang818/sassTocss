@@ -1,0 +1,75 @@
+#overlay
+	opacity: 0
+	visibility: hidden
+	pointer-events: none
+	width: 100%
+	height: 100%
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 99
+	transition: .3s all ease-in-out
+
+	&.active
+		opacity: 1
+		visibility: visible
+		pointer-events: visible
+.overflow
+	overflow: hidden
+.lcl
+	overflow: hidden
+	display: -webkit-box
+	text-overflow: ellipsis
+	-webkit-box-orient: vertical
+
+	&-1
+		-webkit-line-clamp: 1
+
+	&-2
+		-webkit-line-clamp: 2
+
+	&-3
+		-webkit-line-clamp: 3
+
+	&-4
+		-webkit-line-clamp: 4
+.swiper-button-next,
+.swiper-button-prev
+	position: absolute
+	width: 44px !important
+	height: 44px !important
+	border-radius: 50%
+	border: solid 1px $white
+	background-image: unset !important
+	opacity: 1 !important
+	cursor: pointer !important
+	transition: all ease-in-out .3s
+	&::before
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		font-family: Material Icons
+		font-size: r(30px) !important
+		color: $white
+	&:focus
+		outline: none
+.swiper-button-next
+	right: -80px !important
+	&::before
+		content: '\f1df'
+
+.swiper-button-prev
+	left: -80px !important
+	&::before
+		content: '\e317'
+@media screen and ( min-width: 1025px )
+	.swiper-button-next,
+	.swiper-button-prev
+		&:hover
+			background: $gray
+@media screen and ( max-width: 1280px )
+	.swiper-button-next
+		right: -50px !important
+	.swiper-button-prev
+		left: -50px !important
