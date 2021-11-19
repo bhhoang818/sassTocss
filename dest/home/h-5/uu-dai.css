@@ -1,0 +1,118 @@
+.banner-innerhome .endo-wrap {
+    position: relative;
+}
+
+.banner-innerhome .endo-wrap .title-wrap {
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 26px;
+    max-width: 1280px;
+    margin-left: 125px;
+}
+
+.banner-innerhome .endo-wrap .title-wrap h2 {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 29px;
+    color: #333;
+}
+
+.banner-innerhome .endo-wrap .title-wrap .btn-all {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: #BCC0CC;
+    display: flex;
+    align-items: center;
+}
+
+.banner-innerhome .endo-wrap .title-wrap .btn-all::after {
+    padding-top: 3px;
+    padding-left: 3px;
+    content: "\f1df";
+    font-family: Material Icons;
+    font-size: 1.25rem;
+}
+
+.banner-innerhome .endo-wrap .slide-endo {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.banner-innerhome .endo-wrap .slide-endo .slide-inner {
+    position: relative;
+    padding: 24px;
+    background: #ffffff;
+    box-shadow: 2px 2px 9px -4px rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: all ease-in-out 0.3s;
+}
+
+.banner-innerhome .endo-wrap .slide-endo .slide-inner .brand {
+    width: max-content;
+    padding: 4px 8px;
+    border-radius: 2px;
+    margin-bottom: 12px;
+}
+
+.banner-innerhome .endo-wrap .slide-endo .slide-inner .brand span {
+    font-weight: 500;
+    font-size: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.banner-innerhome .endo-wrap .slide-endo .slide-inner .brand.red {
+    background: #F00020;
+}
+
+.banner-innerhome .endo-wrap .slide-endo .slide-inner .brand.blue {
+    background: #009DF5;
+}
+
+.banner-innerhome .endo-wrap .slide-endo .slide-inner .brand.yellow {
+    background: #FFBB0D;
+}
+
+.banner-innerhome .endo-wrap .slide-endo .slide-inner .wrap-content {
+    margin-bottom: 12px;
+}
+
+.banner-innerhome .endo-wrap .slide-endo .slide-inner .wrap-content p {
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    color: #333333;
+}
+
+.banner-innerhome .endo-wrap .slide-endo .slide-inner .date-time span {
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 18px;
+    color: #333;
+    opacity: 0.8;
+}
+
+.banner-innerhome .endo-wrap .slide-endo .slide-inner:hover {
+    border: 1px solid #BCC0CC;
+    box-shadow: 2px 39px 30px -16px rgba(0, 0, 0, 0.21);
+}
+
+.banner-innerhome .endo-wrap .slide-endo::after {
+    position: absolute;
+    top: 0;
+    right: -26px;
+    content: "";
+    width: 239px;
+    height: 260px;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) -18.99%, #FFFFFF 49.64%);
+}

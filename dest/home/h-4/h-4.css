@@ -1,0 +1,202 @@
+.comparny .comparny-image {
+  position: relative;
+}
+.comparny .comparny-image .slide-inner {
+  position: relative;
+}
+.comparny .comparny-image .slide-inner .img a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding-top: 55.0282485876%;
+  border-radius: 20px;
+}
+.comparny .comparny-image .slide-inner .img a img, .comparny .comparny-image .slide-inner .img a iframe, .comparny .comparny-image .slide-inner .img a video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transition: 0.3s ease-in-out all;
+}
+.comparny .comparny-image .slide-inner .img a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: 2;
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.75) 8.88%, rgba(0, 0, 0, 0) 63.45%);
+}
+.comparny .comparny-image .slide-inner .wrapper-content {
+  position: absolute;
+  padding: 0 24px;
+  bottom: 58px;
+  left: 0;
+  z-index: 9;
+}
+.comparny .comparny-image .slide-inner .wrapper-content .desc a {
+  font-weight: 700;
+  font-size: 1.4375rem;
+}
+.comparny .comparny-image .slide-inner .wrapper-content .desc p {
+  font-size: 1.125rem;
+  line-height: 26px;
+  margin-bottom: 0;
+}
+.comparny .comparny-image .slide-inner .wrapper-content .desc a,
+.comparny .comparny-image .slide-inner .wrapper-content .desc p {
+  color: #ffffff;
+}
+@media screen and (max-width: 1366px) {
+  .comparny .comparny-image .slide-inner .wrapper-content .desc a {
+    font-size: 1.25rem;
+  }
+  .comparny .comparny-image .slide-inner .wrapper-content .desc p {
+    font-size: 0.875rem;
+  }
+}
+.comparny .comparny-image .swiper-pagination-bullet {
+  background: #ffffff;
+}
+.comparny .wrap-content {
+  position: relative;
+  padding: 16px 24px;
+  background: linear-gradient(167.6deg, #FFD149 7.65%, #E0242C 71.52%, #CB0817 89.4%);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.comparny .wrap-content .content p {
+  font-weight: bold;
+  font-size: 1.375rem;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+.comparny .wrap-content .content p span {
+  font-weight: 800;
+  font-size: 1.75rem;
+  line-height: 41px;
+}
+.comparny .wrap-content .btn-log {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px 8px 16px;
+  width: 117px;
+  height: 40px;
+  margin-top: 19px;
+  background: #FFD643;
+  border-radius: 50px;
+  transition: all ease-in-out 0.3s;
+}
+.comparny .wrap-content .btn-log span {
+  position: relative;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  transition: all ease-in-out 0.3s;
+}
+.comparny .wrap-content .btn-log::before {
+  content: "\f1df";
+  font-family: Material icons;
+  font-size: 0.875rem;
+  padding-top: 3px;
+  padding-right: 10px;
+  font-weight: 400;
+  color: #333;
+  transition: all ease-in-out 0.3s;
+}
+.comparny .wrap-content .btn-log:hover {
+  background: #F00020;
+}
+.comparny .wrap-content .btn-log:hover span, .comparny .wrap-content .btn-log:hover::before {
+  color: #ffffff;
+}
+.comparny .wrap-content .btn-log:hover span {
+  transform: translateX(-26px);
+}
+.comparny .wrap-content .btn-log:hover::before {
+  transform: translateX(60px);
+}
+.comparny .wrap-content_big {
+  background-image: url("../images/icons/bg-icon.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+  align-items: flex-start;
+}
+.comparny .wrap-content_small {
+  height: 100%;
+  align-items: center;
+}
+@media screen and (max-width: 1366px) {
+  .comparny .wrap-content {
+    padding: 16px;
+  }
+  .comparny .wrap-content .content p {
+    font-size: 1.125rem;
+  }
+}
+.comparny .row .col-lg-4 .row {
+  height: 100%;
+}
+.comparny .row .col-lg-4 .row .col-lg-12,
+.comparny .row .col-lg-4 .row .col-lg-6 {
+  height: 50%;
+}
+.comparny .row .col-lg-4 .row .col-lg-12 {
+  padding-bottom: 15px;
+}
+.comparny .row .col-lg-4 .row .col-lg-6 {
+  padding-top: 15px;
+}
+.comparny .list-item {
+  padding: 43px 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+.comparny .list-item .item a {
+  display: block;
+  width: 84px;
+  height: 84px;
+}
+.comparny .list-item .item p {
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 0;
+}
+.comparny .btn-viewmore {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 40px;
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  border-radius: 50px;
+  color: #333;
+  font-size: 0.875rem;
+}
+.comparny .btn-viewmore::after {
+  content: "\f1df";
+  font-family: Material Icons;
+  font-size: 0.9375rem;
+  padding-top: 5px;
+  padding-left: 8px;
+  transition: all ease-in-out 0.3s;
+}
+.comparny .btn-viewmore:hover::after {
+  transform: rotate(-25deg);
+}

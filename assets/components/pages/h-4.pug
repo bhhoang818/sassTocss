@@ -1,0 +1,54 @@
+section.section.comparny#sec-4 
+	.container 
+		h2.title.title_small.title_small-black Khách hàng Doanh nghiệp
+		.row 
+			.col-lg-8
+				.comparny-image 
+					.swiper-container 
+						.swiper-wrapper
+							-for(i=1; i<6; i++)
+								.swiper-slide
+									.slide-inner
+										.img 
+											a(href="") 
+												img(src="./images/compartny-1.jpg", alt="")
+										.wrapper-content 
+											.desc 
+												a(href="") eCMB - Bộ công cụ số toàn diện dành cho doanh nghiệp
+												p Với quá trình xử lý 100% tự động trực tuyến, ứng dụng mới eDrawdown vừa là một trong những công cụ lõi vừa là mảnh ghép hoàn thiện bộ công cụ số toàn diện của HDBank.
+						.swiper-pagination
+			.col-lg-4 
+				.row 
+					.col-lg-12 
+						.wrap-content.wrap-content_big 
+							.icon 
+								img(src="./images/icons/bank.png", alt="")
+							.content 
+								p eCredit - Cấp tín dụng
+									br 
+									|doanh nghiệp online 24/7
+							a.btn-log(href="") 
+								span Đăng ký
+					.col-lg-6
+						.wrap-content.wrap-content_small 
+							.icon
+								img(src="./images/icons/phone.png", alt="")
+							.content 
+								p Liên hệ ngay
+								p 
+									span 19006060
+					.col-lg-6
+						.wrap-content.wrap-content_small
+							.icon 
+								img(src="./images/icons/list.png", alt="")
+							.content 
+								p Tôi cần tư vấn
+								a.btn-log(href="") 
+									span Đăng ký
+			.list-item.d-flex 
+				-for(i=1; i<10; i++)
+					.item 
+						a(href="") 
+							img(src="./images/icons/p-"+i+".png", alt="")
+						p eAccount
+			a.btn-viewmore(href="") Xem thêm
