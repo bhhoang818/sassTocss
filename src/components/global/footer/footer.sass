@@ -1,0 +1,200 @@
+$black: #333
+$main: #F00020
+$body: #ffffff
+$white: #ffffff
+$gray: #B6BEC8
+$yellow: #FFD643
+$pink: #FF8B9B
+$pink-2: #FFA6C6
+$yellow-2: #FFCF6C
+$purple: #A8A0FF
+$blue-1: #62E4F2
+$blue-2: #87D4FF
+$green: #C3E57A
+$orange: #FF9854
+$opacity: rgba($color: $main, $alpha: .6)
+$gradient: linear-gradient(167.6deg, #FFD149 7.65%, #E0242C 71.52%, #CB0817 89.4%)
+$tran: transparent
+@function r($size)
+	@return ($size/16px)*1rem
+=img-ratio($ratio,$fit:cover)
+	position: relative
+	display: block
+	overflow: hidden
+	padding-top: $ratio *100%
+	img,iframe,video
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: $fit
+		transition: .3s ease-in-out all
+footer
+	position: relative
+	padding: 56px 0
+	background: linear-gradient(0deg, #F4F4F4, #F4F4F4)
+	.footer__logo__arrow
+		position: absolute
+		top: 50px
+		right: 30px
+		cursor: pointer
+	.infor-box
+		padding-right: 50px
+		.logo-footer
+			display: block
+			margin-bottom: 32px
+		ul
+			padding-left: 0
+			li
+				display: flex
+				align-items: flex-start
+				padding: 5px 0
+				font-weight: normal
+				font-size: 14px
+				line-height: 20px
+				color: $black
+				img
+					padding-top: 3px
+					margin-right: 10px
+	.menu-box
+		position: relative
+		align-items: flex-start
+		.menu-list
+			padding-top: 40px
+			margin-left: auto
+			.footer-infor_tile
+				margin-bottom: 8px
+				span
+					font-weight: 800
+					font-size: r(14px)
+					line-height: 20px
+					color: $black
+			ul
+				padding-left: 0
+				li
+					padding: 8px 0
+					a
+						color: $black
+						font-size: r(14px)
+	.footer-coppyright
+		margin-top: 32px
+		margin-bottom: 48px
+		.coppyright
+			width: 100%
+			border-top: 1px solid rgba($color: $black, $alpha: .2)
+			border-bottom: 1px solid rgba($color: $black, $alpha: .2)
+			padding: 32px 0
+			justify-content: center
+			li
+				padding: 0 13.5px
+				border-left: solid 1px rgba($color: $black, $alpha: .2)
+				a,
+				p
+					font-size: r(14px)
+					line-height: 20px
+					color: $black
+					margin-bottom: 0
+				&:first-child
+					padding-left: 0
+					border-left: none
+	.footer-bottom
+		.download-app,
+		.socail-box
+			span
+				font-weight: bold
+				font-size: r(14px)
+				line-height: 20px
+				color: $black
+				margin-bottom: 8px
+				display: block
+		.download-app
+			.qr-code
+				ul
+					padding-left: 0
+					margin-bottom: 0
+					margin-left: 24px
+					li
+						margin-right: 16px
+		.socail-box
+			span
+				text-align: right
+			ul
+				padding-left: 0
+				li
+					margin-left: 6px
+					&:first-child
+						margin-left: 0
+			.desktop
+				@media screen and ( max-width: 575px )
+					display: none
+			.mobile
+				@media screen and ( min-width: 576px )
+					display: none
+	@media screen and ( max-width: 992px )
+		.menu-box
+			justify-content: space-between
+			.menu-list
+				margin-left: 0
+	@media screen and ( max-width: 768px )
+		padding: 48px 12px
+		.infor-box
+			padding-right: 0
+			.logo-footer
+				margin-bottom: 25px
+		.menu-box
+			border-top: solid 1px rgba($color: $black, $alpha: .4)
+			padding-top: 16px
+			flex-direction: column
+			.menu-list
+				padding-top: 8px
+				width: 100%
+				.footer-infor_tile
+					display: flex
+					align-items: center
+					justify-content: space-between
+					&::after
+						content: '\EA4E'
+						font-family: remixicon
+						font-size: 18px
+				ul
+					display: none
+		.footer-coppyright
+			.coppyright
+				li
+					padding: 0 4px
+					&:first-child
+						display: none
+					&:nth-child(2)
+						border-left: 0
+						padding-left: 0
+					a,
+					span
+						font-size: r(12px)
+		.footer-bottom
+			flex-direction: column
+			.download-app
+				margin-bottom: 22px
+				span
+					text-align: center
+					display: none
+				.qr-code
+					flex-direction: column
+					img
+						margin-bottom: 10px
+					ul
+						display: flex
+						align-items: center
+			.socail-box
+				span
+					text-align: center
+					font-size: 14px
+				ul
+					justify-content: center
+					li
+						margin-left: 12px
+				.coppyright
+					p
+						text-align: center
+						margin-bottom: 0
+						font-size: 12px

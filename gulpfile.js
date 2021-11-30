@@ -7,13 +7,14 @@ var pug = require('gulp-pug');
 var watch = require('gulp-watch');
 
 function sassCore() {
-	return gulp.src('assets/components/**/**.sass')
+	return gulp.src('src/_core/**.sass')
 		.pipe(sass().on('error', sass.logError))
-		.pipe(gulp.dest('./css'));
+		.pipe(concat('core.css'))
+		.pipe(gulp.dest('dest'));
 };
 
 function pugToHtml() {
-	return gulp.src('assets/components/**/**.pug')
+	return gulp.src('src/components/**/**.pug')
 		.pipe(pug({
 			pretty: true
 		}))

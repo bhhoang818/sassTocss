@@ -1,0 +1,65 @@
+section.section.customer(setBackground="./images/bg-2.jpg")
+	.container 
+		h2.title.title_small.title_small-white Khách hàng cá nhân
+		.block-desktop
+			.big-image 
+				.img-inner 
+					a(href="") 
+						img(src="./images/customer-1.jpg", alt="")
+				.wrapper-content 
+					.desc 
+						a(href="") Bảo hiểm chăm sóc sức khoẻ toàn cầu - GHC
+						p Bảo vệ sức khoẻ thể chất và tinh thần các thành viên gia đình.
+					a.btn-buy-now(href="") Mua gói
+			.list-block.d-flex
+				-for(i=2; i<7; i++)
+					.list-block_item
+						.list-block_item__img
+							a(href="") 
+								img(src="./images/customer-"+i+".png", alt="")
+						.list-block_item__content 
+							.desc 
+								a(href="") Tài khoản thanh toán trực tuyến
+								p Gửi và rút tiền mặt tiện lợi. Nhận chuyển khoản 24/7.
+							a.btn-small(href="") Mở tài khoản
+		.block-mobile 
+			.top-block 
+				h3 Tiền gửi HDBank
+				.swiper-container
+					.swiper-wrapper
+						-for(i=2; i<6; i++)
+							.swiper-slide
+								.slide-inner
+									.slide-inner_img
+										a(href="")
+											img(src="./images/customer-"+i+".png", alt="")
+									.slide-inner_content
+										.slide-inner_content__title
+											a(href="")  Tài khoản thanh toán trực tuyến
+										.slide-inner_content__desc 
+											p Gửi và rút tiền mặt tiện lợi. Nhận tiền và chuyển khoản nhanh chóng.
+										a.btn-small(href="") Mở tài khoản
+			.middle-block 
+				h3 Bảo hiểm HDBank
+				.middle-block_item
+					.middle-block_item__img 
+						a(href="") 
+							img(src="./images/customer-1.jpg", alt="")
+					.middle-block_item__content 
+						.desc 
+							a(href="") Bảo hiểm chăm sóc sức khoẻ toàn cầu - GHC
+							p Bảo vệ sức khoẻ thể chất và tinh thần các thành viên gia đình.
+						a.btn-buy-now(href="") Mua gói
+			.bottom-block
+				h3 Vay tài chính
+				.list.d-flex.align-center-justify-between
+					-for(i=3; i<6; i++)
+						.list-item
+							.list-item__img
+								a(href="") 
+									img(src="./images/customer-"+i+".png", alt="")
+							.list-item__content 
+								.desc 
+									a(href="") Vay kinh doanh
+								a.btn-small(href="") Nhận tiền vay
+		a.btn-view-all(href="") Xem tất cả thẻ

@@ -1,0 +1,115 @@
+section.section.atm-location 
+    .container-fluid 
+        .row 
+            .col-12.col-lg-12.col-xl-8 
+                .title-mobile
+                    h2.title.title_big.title_big-black Mạng lưới chi nhánh/ATM
+                    em.material-icons keyboard_arrow_down
+                .right-block
+                    h2.title.title_big-black Mạng lưới chi nhánh/ATM
+                    .tabs 
+                        ul.tab-list.d-flex
+                            li.active(rel="#panel-1") Chi nhánh
+                            li(rel="#panel-2") ATM
+                        include ./form-group.pug
+                        .panel.active#panel-1
+                            .row 
+                                .col-sm-12.col-lg-6
+                                    ul.panel_list 
+                                        li.panel_list__item
+                                            .panel_list__item-title 
+                                                em.ri-map-pin-fill
+                                                p Hội sở
+                                                img(src="./images/icons/location.png", alt="")
+                                            .panel_list__item-desc 
+                                                p 25bis Nguyễn Thị Minh Khai, P. Bến Nghé Quận 1, Hồ Chí Minh
+                                                p Tel: 1900 6060 | Fax: (028) 62 915 900
+                                        li.panel_list__item
+                                            .panel_list__item-title 
+                                                em.ri-map-pin-fill
+                                                p Chi nhánh Sài Gòn
+                                                img(src="./images/icons/location.png", alt="")
+                                            .panel_list__item-desc 
+                                                p 25bis Nguyễn Thị Minh Khai, P. Bến Nghé Quận 1, Hồ Chí Minh
+                                                p Tel: 1900 6060 | Fax: (028) 62 915 900
+                                        li.panel_list__item
+                                            .panel_list__item-title 
+                                                em.ri-map-pin-fill
+                                                p Chí nhánh Gia Định
+                                                img(src="./images/icons/location.png", alt="")
+                                            .panel_list__item-desc 
+                                                p 25bis Nguyễn Thị Minh Khai, P. Bến Nghé Quận 1, Hồ Chí Minh
+                                                p Tel: 1900 6060 | Fax: (028) 62 915 900
+                                .col-sm-12.col-lg-6
+                                    .map 
+                                        img(src="./images/promotion/map.png", alt="")
+                        .panel#panel-2
+                            .row 
+                                .col-sm-12.col-lg-6
+                                    ul.panel_list 
+                                        li.panel_list__item
+                                            .panel_list__item-title 
+                                                em.ri-map-pin-fill
+                                                p Hội sở
+                                                img(src="./images/icons/location.png", alt="")
+                                            .panel_list__item-desc 
+                                                p 25bis Nguyễn Thị Minh Khai, P. Bến Nghé Quận 1, Hồ Chí Minh
+                                                p Tel: 1900 6060 | Fax: (028) 62 915 900
+                                        li.panel_list__item
+                                            .panel_list__item-title 
+                                                em.ri-map-pin-fill
+                                                p Chi nhánh Sài Gòn
+                                                img(src="./images/icons/location.png", alt="")
+                                            .panel_list__item-desc 
+                                                p 25bis Nguyễn Thị Minh Khai, P. Bến Nghé Quận 1, Hồ Chí Minh
+                                                p Tel: 1900 6060 | Fax: (028) 62 915 900
+                                        li.panel_list__item
+                                            .panel_list__item-title 
+                                                em.ri-map-pin-fill
+                                                p Chí nhánh Gia Định
+                                                img(src="./images/icons/location.png", alt="")
+                                            .panel_list__item-desc 
+                                                p 25bis Nguyễn Thị Minh Khai, P. Bến Nghé Quận 1, Hồ Chí Minh
+                                                p Tel: 1900 6060 | Fax: (028) 62 915 900
+                                .col-sm-12.col-lg-6
+                                    .map 
+                                        img(src="./images/promotion/map.png", alt="")
+                
+            .col-12.col-lg-12.col-xl-4
+                .title-mobile
+                    h2.title.title_small.title_small-white Câu hỏi thường gặp
+                    em.material-icons keyboard_arrow_down
+                .left-block
+                    h2.title.title_small.title_small-white Câu hỏi thường gặp
+                    .side-navigation-wrap
+                        ul.side-navigation
+                            li.active
+                                .accordion-title
+                                    em.ri-question-fill
+                                    p Tôi có thể truy cập tài khoản của mình khi đi nước ngoài không?
+                                    em.ri-arrow-down-s-line
+                                .nav-sub
+                                    p Với một thiết bị (máy vi tính để bàn, máy vi tính xách tay, máy vi tính bảng, điện thoại) kết nối mạng Internet, quý khách có thể kết nối với Ngân hàng trực tuyến HDBank và truy cập vào tài khoản của quý khách.
+                            li
+                                .accordion-title
+                                    em.ri-question-fill
+                                    p Làm thế nào để khôi phục mật khẩu?
+                                    em.ri-arrow-down-s-line
+                                .nav-sub
+                                    p Với một thiết bị (máy vi tính để bàn, máy vi tính xách tay, máy vi tính bảng, điện thoại) kết nối mạng Internet, quý khách có thể kết nối với Ngân hàng trực tuyến HDBank và truy cập vào tài khoản của quý khách.
+                            li
+                                .accordion-title
+                                    em.ri-question-fill
+                                    p Làm thế nào để khôi phục tên đăng nhập?
+                                    em.ri-arrow-down-s-line
+                                .nav-sub
+                                    p Với một thiết bị (máy vi tính để bàn, máy vi tính xách tay, máy vi tính bảng, điện thoại) kết nối mạng Internet, quý khách có thể kết nối với Ngân hàng trực tuyến HDBank và truy cập vào tài khoản của quý khách.
+                            li
+                                .accordion-title
+                                    em.ri-question-fill
+                                    p Kết nối mạng của tôi bị lỗi
+                                    em.ri-arrow-down-s-line
+                                .nav-sub
+                                    p Với một thiết bị (máy vi tính để bàn, máy vi tính xách tay, máy vi tính bảng, điện thoại) kết nối mạng Internet, quý khách có thể kết nối với Ngân hàng trực tuyến HDBank và truy cập vào tài khoản của quý khách.
+                        a.btn-viewmore(href="") 
+                            span Xem tất cả câu hỏi 

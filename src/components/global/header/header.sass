@@ -1,0 +1,383 @@
+$black: #333
+$main: #F00020
+$body: #ffffff
+$white: #ffffff
+$gray: #B6BEC8
+$yellow: #FFD643
+$pink: #FF8B9B
+$pink-2: #FFA6C6
+$yellow-2: #FFCF6C
+$purple: #A8A0FF
+$blue-1: #62E4F2
+$blue-2: #87D4FF
+$green: #C3E57A
+$orange: #FF9854
+$opacity: rgba($color: $main, $alpha: .6)
+$gradient: linear-gradient(167.6deg, #FFD149 7.65%, #E0242C 71.52%, #CB0817 89.4%)
+$tran: transparent
+@function r($size)
+	@return ($size/16px)*1rem
+=img-ratio($ratio,$fit:cover)
+	position: relative
+	display: block
+	overflow: hidden
+	padding-top: $ratio *100%
+	img,iframe,video
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: $fit
+		transition: .3s ease-in-out all
+.nav-top
+	width: 100%
+	position: relative
+	padding-top: 15/16*1rem
+	padding-bottom: 25/16*1rem
+	nav
+		.nav-full
+			.btn-toggle
+				margin-right: 27px
+			.logo
+				display: block
+				max-width: 205px
+			.search-box
+				margin-left: auto
+				.searchform
+					.form-group
+						width: 400px
+						height: 58px
+						position: relative
+						background: #F9FAFC
+						border-radius: 42px
+						.searchinput
+							width: 100%
+							height: 100%
+							background: $tran
+							padding-left: 15px
+						button
+							position: absolute
+							top: 50%
+							right: 10px
+							background: $tran
+							transform: translateY(-50%)
+			.dropdown
+				margin-left: 50px
+				.dropdown-toggle
+					padding: 0px 12px 0px 16px
+					width: 84px
+					height: 58px
+					border-radius: 0
+					background: $tran
+					border: 0
+					display: flex
+					align-items: center
+					justify-content: center
+					transition: all ease-in-out .3s
+					&::after
+						content: '\EA4E'
+						font-family: remixicon !important
+						font-size: r(18px)
+						color: $black
+						border: none
+						transition: all ease-in-out .3s
+					@media screen and ( min-width: 1025px )
+						&:hover
+							border: 1px solid $gray
+							background: #e7eaf2
+							box-shadow: 0px 14px 40px rgba(33, 43, 54, 0.1)
+							border-radius: 40px
+							&::after
+								transform: rotate(180deg)
+				.dropdown-menu
+					display: none
+					padding: 12px 16px 12px 12px
+					width: 117px
+					height: 92px
+					background: #FFFFFF
+					box-shadow: 0px 14px 40px rgba(33, 43, 54, 0.1)
+					border-radius: 20px
+					right: 0
+					.dropdown-item
+						a
+							span
+								padding-left: 8px
+								font-weight: bold
+								font-size: 18px
+								line-height: 26px
+								color: #000000
+				&:hover
+					.dropdown-menu
+						opacity: 1
+						visibility: visible
+			.btn-login
+				margin-left: 50px
+				min-width: 176px
+				height: 58px
+				padding: 0
+				display: flex
+				align-items: center
+				justify-content: center
+			.bell-ring
+				order: 4
+				margin-left: 19px
+				position: relative
+				&::after
+					position: absolute
+					top: 5px
+					right: 0
+					content: ''
+					width: 6px
+					height: 6px
+					border-radius: 50%
+					background: $main
+				@media screen and ( min-width: 992px )
+					display: none
+	@media ( max-width: 1199.98px )
+		nav
+			.nav-full
+				.search-box
+					.searchform
+						.form-group
+							width: 280px
+	@media ( max-width: 1024.98px )
+		nav
+			.nav-full
+				.search-box
+					display: none
+				.dropdown
+					margin-left: auto
+	@media ( max-width: 992px ) and ( min-width: 320px )
+		padding: 12/16*1rem 0
+		height: 60px
+		z-index: 999
+		background: $white
+		nav
+			.nav-full
+				.btn-toggle
+					margin-right: 10px
+				.logo
+					max-width: 104px
+
+				.dropdown
+					order: 5
+					margin-left: 15px
+					.dropdown-toggle
+						width: auto
+						height: auto
+						padding: 0
+						&::after
+							display: none
+				.btn-login
+					margin-left: auto
+					order: 3
+					display: flex !important
+					align-items: center !important
+					min-width: unset
+					width: 106px
+					height: 32px
+					padding: 6px 16px !important
+					span
+						font-size: r(14px)
+						margin-left: 0
+						padding-bottom: 3px
+					&::after
+						display: none
+
+	header
+		position: fixed
+		top: 0
+		left: -100%
+		visibility: hidden
+		opacity: 0
+		height: 100vh
+		z-index: 999
+		transition: all ease-in-out .5s
+
+		.nav-toggle
+			padding: r(48px) r(24px)
+			max-width: 310px
+			height: 100%
+			background: $white
+			.logo
+				width: 100%
+				margin-bottom: 28px
+				display: block
+				text-align: center
+				a
+					+img-ratio(72/206)
+			.search-box
+				display: flex
+				flex-direction: row
+				justify-content: space-between
+				align-items: center
+				padding: 4px 12px 4px 16px
+				margin-bottom: 20px
+				width: 100%
+				height: 40px
+				background: #F9FAFC
+				border-radius: 42px
+				flex-grow: 1
+				form
+					width: 100%
+					.form-group
+						width: 100%
+						position: relative
+						input
+							width: 100%
+							height: 100%
+							border: none
+							background: none
+							&:placeholder
+								font-size: r(14px)
+								font-weight: 500
+								color: $black
+						button
+							position: absolute
+							top: 50%
+							right: 0
+							transform: translateY(-50%)
+							border: none
+							background: none
+			.srcoll-bar
+				max-height: 80%
+				overflow-y: auto
+				&::-webkit-scrollbar-track
+					box-shadow: inset 0 0 6px rgba(255, 255, 255, 0)
+					background-color: #f5f5f5
+					border-radius: 20px
+					display: none
+				&::-webkit-scrollbar
+					width: 5px
+					height: 90px
+				&::-webkit-scrollbar-thumb
+					border-radius: 3px
+					box-shadow: inset 0 0 6px rgba(255, 255, 255, 0)
+					background-color: $yellow
+					display: none
+				.login
+					.btn-login
+						width: 100%
+						margin-bottom: 0
+						height: 44px
+						padding: 9px 0 3px 0 !important
+						p
+							display: block
+							margin-bottom: 0
+							font-size: r(18px)
+							font-weight: 700
+							transition: all ease-in-out .5s
+						&::after
+							right: calc( 100% - 40px )
+							top: 60%
+						@media screen and ( min-width: 1024px )
+							&:hover
+								&::after
+									right: 20px
+									color: $white
+								p
+									color: $white
+				.side-navigation-wrap
+					margin-top: 20px
+					.side-navigation
+						padding-left: 0
+						li
+							padding: r(15px) 0
+							.accordion-title
+								display: flex
+								align-items: center
+								justify-content: space-between
+								a
+									font-style: normal
+									font-weight: bold
+									font-size: 1rem
+									line-height: 23px
+									color: $black !important
+								em
+									cursor: pointer
+									&::after
+										font-style: normal
+										content: '\e145'
+										font-family: 'Material Icons'
+										font-size: r(18px)
+										font-weight: 500
+							.nav-sub
+								display: none
+								padding-left: 0
+								li
+									padding: 17px 0
+									a
+										color: $black
+										display: flex
+										align-items: center
+										.icon
+											margin-right: 10px
+								&.suport
+									li
+										a
+											img
+												margin-right: 10px
+												display: block
+							&.active
+								.accordion-title
+									em
+										&::after
+											content: '\e15b'
+				.download-app
+					margin-bottom: 24px
+					p
+						font-weight: bold
+						font-size: 16px
+						line-height: 23px
+						color: $black
+						margin-bottom: 32px
+					.icon
+						a
+							display: flex
+							width: 128px
+							img
+								width: 100%
+							&:first-child
+								padding-right: 8px
+							&:last-child
+								padding-left: 8px
+				.socail-list
+					p
+						font-weight: 700
+						font-size: r(14px)
+						line-height: 23px
+						color: $black
+						margin-bottom: 32px
+					ul
+						li
+							padding: 0 5px
+							&:first-child
+								padding-left: 0
+							&:last-child
+								padding-right: 0
+					.copy-right
+						font-weight: 400
+						font-size: r(12px)
+						line-height: 18px
+						text-align: center
+						color: $black
+						align-self: stretch
+						margin: 32px 0px
+		&.active
+			left: 0
+			visibility: visible
+			opacity: 1
+		@media ( max-width: 991px ) and ( min-width: 320px )
+			top: 60px
+			.nav-toggle
+				padding: r(16px)
+				max-width: 90vw
+				.logo
+					display: none
+				.srcoll-bar
+					max-height: 80vh
+					.login
+						.title
+							padding: 0 !important
+					.side-navigation-wrap

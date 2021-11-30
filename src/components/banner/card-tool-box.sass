@@ -1,0 +1,376 @@
+$black: #333
+$main: #F00020
+$body: #ffffff
+$white: #ffffff
+$gray: #B6BEC8
+$yellow: #FFD643
+$pink: #FF8B9B
+$pink-2: #FFA6C6
+$yellow-2: #FFCF6C
+$purple: #A8A0FF
+$blue-1: #62E4F2
+$blue-2: #87D4FF
+$green: #C3E57A
+$orange: #FF9854
+$opacity: rgba($color: $main, $alpha: .6)
+$gradient: linear-gradient(167.6deg, #FFD149 7.65%, #E0242C 71.52%, #CB0817 89.4%)
+$tran: transparent
+@function r($size)
+    @return ($size/16px)*1rem
+=img-ratio($ratio,$fit:cover)
+    position: relative
+    display: block
+    overflow: hidden
+    padding-top: $ratio *100%
+    img,iframe,video
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        object-fit: $fit
+        transition: .3s ease-in-out all
+.card-tool-box
+    position: absolute
+    bottom: 24px
+    right: 7.9%
+    z-index: 10
+    width: 350px
+    background: rgba(255, 255, 255, 0.6)
+    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.2)
+    backdrop-filter: blur(80px)
+    border-radius: 20px
+    .card-switcher
+        width: 100%
+        height: 100%
+        padding: 24px
+        .header-switcher
+            margin-bottom: 16px
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            padding: 8px !important
+            background: rgba(241, 244, 249, 0.6)
+            box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.05)
+            border-radius: 40px
+            li
+                padding: 8px 16px
+                border-radius: 40px
+                font-style: normal
+                font-weight: 500
+                font-size: r(14px)
+                line-height: 20px
+                white-space: nowrap
+                color: $black
+                opacity: .4
+                cursor: pointer
+                &.active
+                    background: $white
+                    color: $black
+                    opacity: 1
+            @media screen and ( max-width: 1366px )
+                margin-bottom: 0
+        .panel
+            display: none
+            .from-slide-loan
+                form
+                    .form-group
+                        margin-bottom: 12px
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+                        label
+                            font-size: r(14px)
+                            line-height: 20px
+                            color: $black
+                        input#amount
+                            width: 100px
+                            border: none
+                            background: none
+                            color: $main
+                            font-weight: 800
+                            font-size: r(20px)
+                            line-height: 29px
+                            &:focus
+                                outline: none
+                                box-shadow: none
+
+                        @media screen and ( max-width: 1366px )
+                            margin-bottom: 8px
+            .ui-slider
+                position: relative
+                width: 100%
+                height: 8px
+                background: #E7EAF2
+                border-radius: 16px
+                &.ui-widget.ui-widget-content
+                    border: solid 1px transparent !important
+                .ui-slider-range
+                    background: $main
+                .ui-slider-handle
+                    position: relative
+                    &.ui-corner-all
+                        position: absolute
+                        top: -13px
+                        left: 0
+                        width: 32px
+                        height: 32px
+                        display: block
+                        border-radius: 50%
+                        background: $white
+                        &::after
+                            position: absolute
+                            top: 50%
+                            left: 50%
+                            content: ''
+                            width: 22px
+                            height: 22px
+                            border-radius: 50%
+                            background: $main
+                            transform: translate(-50%, -50%)
+                        &:focus
+                            outline: none
+            .range-slider__label
+                margin-top: 16px
+                margin-bottom: 16px
+                display: flex
+                align-items: center
+                justify-content: space-between
+                @media screen and ( max-width: 1366px )
+                    margin-top: 6px
+                    margin-bottom: 6px
+            .period-wraper
+                table
+                    width: 100%
+                    tr
+                        td
+                            text-align: center
+                        &:first-child
+                            td
+                                font-size: r(12px)
+                                line-height: 18px
+                                text-align: center
+                                color: #333333
+                                padding-bottom: 8px
+                        &:last-child
+                            td
+                                width: 50%
+                                input
+                                    width: 100%
+                                    height: 40px
+                                    background: #FFFFFF
+                                    border-radius: 40px
+                                    border: none
+                                &:first-child
+                                    position: relative
+                                    padding-right: 6px
+                                    input
+                                        font-size: r(14px)
+                                        padding-left: 50px
+                                    .qty-minus,
+                                    .qty-plus,
+                                    .input-group-addon
+                                        position: absolute
+                                        top: 50%
+                                        cursor: pointer
+                                        display: flex
+                                        align-items: center
+                                        transform: translateY(-50%)
+                                    .qty-minus
+                                        left: 13px
+                                    .qty-plus
+                                        right: 13px
+                                    .input-group-addon
+                                        right: 35%
+                                        font-size: r(14px)
+                                &:last-child
+                                    position: relative
+                                    padding-left: 6px
+                                    input
+                                        text-align: center
+                                    .input-suffix
+                                        position: absolute
+                                        top: 50%
+                                        right: 15%
+                                        transform: translateY(-50%)
+            .btn-login
+                width: 100%
+                height: 42px
+                padding: 8px 24px !important
+                margin-top: 28px
+                span
+                    font-size: r(18px)
+                &::after
+                    display: flex
+                    align-items: center
+                    right: calc( 100% - 40% )
+                &:hover
+                    &::after
+                        right: 30%
+                @media screen and ( max-width: 1366px )
+                    margin-top: 8px
+            .desc
+                p
+                    font-size: 12px
+                    line-height: 18px
+                    color: #333333
+                    opacity: 0.5
+                    flex: none
+                    order: 4
+                    align-self: stretch
+                    margin: 16px 0px
+                    @media screen and ( max-width: 1366px )
+                        margin: 8px 0
+            .calculator
+                margin-top: 29px
+                .form-group
+                    align-items: center
+                    margin-bottom: 16px
+                    .input-slect
+                        display: flex
+                        flex-direction: row
+                        align-items: center
+                        padding: 8px 8px 8px 16px
+                        width: 116px
+                        height: 40px
+                        background: #F9FAFC
+                        border-radius: 40px
+                        flex-grow: 0
+                        margin-right: 8px
+                        select
+                            padding: 0 !important
+                            border: none
+                            background: $tran !important
+                            &:focus
+                                outline: none
+                                box-shadow: none
+
+                    .input-value
+                        padding: 8px 16px
+                        width: 175px
+                        height: 40px
+                        background: #F9FAFC
+                        border-radius: 40px
+                        flex: none
+                        align-self: stretch
+                        flex-grow: 1
+                        input
+                            width: 100%
+                            border: none
+                            background-color: $tran
+                            &:focus
+                                outline: none
+                                box-shadow: none
+                    &:last-child
+                        margin-bottom: 20px
+                @media screen and ( max-width: 1365.98px )
+                    margin-top: 8px
+                    .form-group
+                        margin-bottom: 8px
+                        &:last-child
+                            margin-bottom: 8px
+            .table-box
+                max-width: 240px
+                margin: 0 auto
+                table
+                    width: 100%
+                    tr
+                        td
+                            line-height: 18px
+                            font-size: r(12px)
+                            span
+                                padding-left: 10px
+
+                        &:first-child
+                            border-bottom: 1px dashed #B6BEC8
+                            td
+                                padding-bottom: 16px
+                                @media screen and ( max-width: 1366px )
+                                    padding-bottom: 8px
+                        &:nth-child(2)
+                            td
+                                padding: 17px 0
+                                @media screen and ( max-width: 1366px )
+                                    padding: 15px 0
+                .desc
+                    text-align: center
+                    padding: 0 r(20px)
+
+            &.active
+                display: block
+    .from-slide-advise
+        padding: 24px
+        display: none
+        width: 100%
+        height: 100%
+        .header-advise,
+        .nav-list
+            padding-left: 0
+        .header-advise
+            justify-content: space-between
+            margin-bottom: 45px
+            li
+                .lnr
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    width: 40px
+                    height: 40px
+                    border-radius: 50%
+                    background-color: #E7EAF2
+                    font-size: r(18px)
+                    font-weight: 700
+                p
+                    margin-bottom: 0
+                    font-size: r(18px)
+                    font-weight: 700
+        .nav-list
+            justify-content: space-between
+            li
+                text-align: center
+                p
+                    margin-bottom: 0
+                    &:first-child
+                        font-size: r(14px)
+                        color: $black
+                        opacity: .4
+                &:first-child
+                    p
+                        &:last-child
+                            color: $main
+                            font-weight: 700
+        .from-slide
+            .form-group
+                position: relative
+                padding: 8px 8px 8px 16px
+                width: 100%
+                margin-bottom: 16px
+                border-radius: 40px
+                background-color: $white
+                span
+                    position: absolute
+                    top: 50%
+                    left: 10px
+                    transform: translateY(-50%)
+
+                .form-control
+                    border: none
+                    background-color: $tran
+                    padding-left: 20px
+                    &:focus
+                        outline: none
+                        box-shadow: none
+            .btn-login
+                width: 100%
+                height: 42px
+                padding: 0 !important
+                span
+                    font-size: r(18px)
+                &::after
+                    display: flex
+                    align-items: center
+                    right: calc( 100% - 40% )
+                &:hover
+                    &::after
+                        right: 30%

@@ -1,0 +1,26 @@
+section.section.suggest-product 
+    .container 
+        h2.title.title_small Sản phẩm gợi ý
+        .product-list 
+            -for(i=2; i<7; i++)
+                .product-item
+                    .product-item_wrap
+                        .product-item_wrap__img
+                            a(href="")
+                                img(src="./images/customer-"+i+".png", alt="")
+                        .product-item_wrap__content
+                            .product-item_wrap__content-title 
+                                a(href="") 
+                                    p Tài khoản thanh toán trực tuyến
+                            .product-item_wrap__content-desc 
+                                p Gửi và rút tiền mặt tiện lợi. Nhận chuyển khoản 24/7.
+                            a.btn-small(href="") 
+                                p Mở sổ tiết kiệm
+        a.viewmore(href="") Xem tất cả
+.banner-menber
+    .big-banner_desktop 
+        img(src="./images/promotion/banner-sign.png", alt="")
+        a.btn-login(href="")
+            p Đăng ký ngay
+    .big-banner_mobile 
+        img(src="./images/promotion/banner-sign-mb.png", alt="")

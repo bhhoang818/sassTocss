@@ -1,0 +1,195 @@
+$black: #333
+$main: #F00020
+$body: #ffffff
+$white: #ffffff
+$gray: #B6BEC8
+$yellow: #FFD643
+$pink: #FF8B9B
+$pink-2: #FFA6C6
+$yellow-2: #FFCF6C
+$purple: #A8A0FF
+$blue-1: #62E4F2
+$blue-2: #87D4FF
+$green: #C3E57A
+$orange: #FF9854
+$opacity: rgba($color: $main, $alpha: .6)
+$gradient: linear-gradient(167.6deg, #FFD149 7.65%, #E0242C 71.52%, #CB0817 89.4%)
+$tran: transparent
+@function r($size)
+	@return ($size/16px)*1rem
+=img-ratio($ratio,$fit:cover)
+	position: relative
+	display: block
+	overflow: hidden
+	padding-top: $ratio *100%
+	img,iframe,video
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: $fit
+		transition: .3s ease-in-out all
+.home-banner
+	position: relative
+	width: 100%
+	.swiper-pagination
+		position: absolute
+		left: 24px !important
+		bottom: 32px !important
+		width: fit-content !important
+		&-bullet
+			width: 16px
+			height: 16px
+			background: $white
+			&-active
+				background: $white
+	.hero-image
+		width: 100%
+		position: relative
+		a
+			+img-ratio(552/1440)
+		.product-list-slide
+			position: absolute
+			bottom: 95px
+			ul
+				padding-left: 0
+				li
+					margin-bottom: 8px
+					a
+						color: $black !important
+						display: flex
+						align-items: center
+						justify-content: space-between
+						padding: 11px 11px 11px 22px
+						background-color: rgba(255, 255, 255, 0.7)
+						backdrop-filter: blur(11px)
+						border-radius: 0px 82.5px 82.5px 0px
+						p
+							font-weight: 800
+							font-size: r(22px)
+							line-height: 110%
+							color: #454F5B
+							margin-bottom: 0
+							span
+								color: $main
+						.lnr
+							display: flex
+							align-items: center
+							justify-content: center
+							width: 27.5px
+							height: 27.5px
+							border-radius: 50%
+							margin-left: 10px
+							background: $white
+							mix-blend-mode: normal
+							transform: rotate(0deg)
+							color: $main
+							font-size: r(12px)
+							font-weight: 700
+							transition: all .5s ease-in-out
+					&:hover
+						a
+							background-color: $white
+							.lnr
+								background: $main
+								color: $white
+			@media screen and ( max-width: 991.98px )
+				bottom: 58px
+				ul
+					li
+						a
+							padding: 8px 8px 8px 16px
+							p
+								font-size: 1rem
+	.marquee
+		position: relative
+		overflow: hidden
+		position: absolute
+		top: 24px
+		left: 50%
+		transform: translateX(-50%)
+		max-width: 1344px
+		background: rgba($color: $main, $alpha: 0.72)
+		backdrop-filter: blur(30px)
+		border-radius: 12px
+		z-index: 10
+		padding: 8px 24px
+		.marquee-list
+			width: 100%
+			display: flex
+			align-items: center
+			margin: 0
+			padding-left: 0
+			animation: scrolling 18s linear infinite
+			.marquee-list_item
+				display: flex
+				align-items: center
+				margin-left: 24px
+				border: none
+				white-space: nowrap
+				color: $white
+				font-size: r(18px)
+				p
+					font-weight: 600
+					margin-bottom: 0
+		&::before
+			position: absolute
+			top: 0
+			left: 0
+			background: $main
+			width: 24px
+			height: 100%
+			content: ''
+			z-index: 2
+			opacity: 0.72
+			border-top-left-radius: 12px
+			border-bottom-left-radius: 12px
+		&::after
+			position: absolute
+			top: 0
+			right: 0
+			background: $main
+			width: 24px
+			height: 100%
+			content: ''
+			z-index: 2
+			opacity: 0.72
+			border-top-right-radius: 12px
+			border-bottom-right-radius: 12px
+		@media screen and ( max-width: 1366px )
+			top: 15px
+			max-width: 1024px
+			.marquee-list
+				animation: scrolling 15s linear infinite
+				.marquee-list_item
+					span
+						font-size: r(14px)
+		@media screen and ( max-width: 1024px )
+			top: 24px
+			max-width: 90vw
+	@media ( max-width: 575.98px )
+		.hero-image
+			width: 100%
+			height: 100vh
+			a
+				+img-ratio(644/375)
+				height: 100%
+	@media ( max-width: 1366px )
+		.hero-image
+			width: 100%
+			height: 100vh
+			a
+				height: 100%
+
+@keyframes scrolling
+	0%
+		transform: translateX(88vw)
+	100%
+		transform: translateX(-110vw)
+@media screen and ( max-width: 575.98px )
+	@keyframes scrolling
+		0%
+			transform: translateX(88vw)
+		100%
+			transform: translateX(-330vw)

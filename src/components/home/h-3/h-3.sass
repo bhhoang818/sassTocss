@@ -1,0 +1,263 @@
+$black: #333
+$main: #F00020
+$body: #ffffff
+$white: #ffffff
+$gray: #B6BEC8
+$yellow: #FFD643
+$pink: #FF8B9B
+$pink-2: #FFA6C6
+$yellow-2: #FFCF6C
+$purple: #A8A0FF
+$blue-1: #62E4F2
+$blue-2: #87D4FF
+$green: #C3E57A
+$orange: #FF9854
+$opacity: rgba($color: $main, $alpha: .6)
+$gradient: linear-gradient(167.6deg, #FFD149 7.65%, #E0242C 71.52%, #CB0817 89.4%)
+$tran: transparent
+@function r($size)
+	@return ($size/16px)*1rem
+=img-ratio($ratio,$fit:cover)
+	position: relative
+	display: block
+	overflow: hidden
+	padding-top: $ratio *100%
+	img,iframe,video
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: $fit
+		transition: .3s ease-in-out all
+.customer
+	margin-top: 24px
+	.block-desktop
+		.big-image
+			position: relative
+			margin-bottom: 18px
+			.img-inner
+				a
+					+img-ratio(506/1240)
+					img
+						filter: drop-shadow(1.09013px 1.09013px 5.45063px rgba(0, 0, 0, 0.07))
+						border-radius: 20px
+			.wrapper-content
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 100%
+				padding: 24px 24px 24px 56px
+				display: flex
+				align-items: center
+				justify-content: space-between
+				border-bottom-left-radius: 20px
+				border-bottom-right-radius: 20px
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0.3%, rgba(0, 0, 0, 0.58) 83.1%)
+				.desc
+					a
+						font-weight: 800
+						font-size: r(32px)
+						line-height: 110%
+						color: #FFFFFF
+					p
+						font-weight: 400
+						font-size: r(24px)
+						line-height: 35px
+						color: #FFFFFF
+						opacity: 0.7
+						margin-bottom: 0
+
+		.list-block
+			align-items: center
+			justify-content: space-between
+			&_item
+				padding: 0px 0px 9.74359px
+				width: 100%
+				background: rgba(255, 255, 255, 0.94)
+				box-shadow: 1.21795px 1.21795px 6.08974px rgba(0, 0, 0, 0.07)
+				border-radius: 12px
+				margin-left: 11px
+				&__img
+					a
+						+img-ratio(154/238)
+						img
+							border-top-right-radius: 12px
+							border-top-left-radius: 12px
+				&__content
+					padding: 10px 16px
+					display: flex
+					flex-direction: column
+					justify-content: center
+					align-items: center
+					.desc
+						a
+							font-weight: bold
+							font-size: r(18px)
+							line-height: 110%
+							color: #333333
+						p
+							padding-top: 5px
+							font-size: r(14px)
+							line-height: 20px
+							color: #333333
+							opacity: 0.7
+							overflow: hidden
+							display: -webkit-box
+							text-overflow: ellipsis
+							-webkit-box-orient: vertical
+							-webkit-line-clamp: 2
+							margin-bottom: 0
+				&:nth-child(1)
+					margin-left: 0
+		@media screen and ( max-width: 991.98px )
+			display: none
+	@media screen and ( max-width: 991.98px )
+		h2.title
+			padding-bottom: 0 !important
+	.block-mobile
+		@media screen and ( min-width: 992px )
+			display: none
+		.top-block,
+		.middle-block,
+		.bottom-block
+			h3
+				font-weight: 800
+				font-size: 16px
+				line-height: 23px
+				color: $white
+				padding-top: 12px
+				padding-bottom: 8px
+		.top-block
+			padding-bottom: 16px
+			.slide-inner
+				width: 100%
+				min-height: 183px
+				background: rgba(255, 255, 255, 0.94)
+				box-shadow: 1.21795px 1.21795px 6.08974px rgba(0, 0, 0, 0.07)
+				border-radius: 20px
+				&_img
+					a
+						+img-ratio(95/176)
+						img
+							border-top-left-radius: 20px
+							border-top-right-radius: 20px
+				&_content
+					padding: 8px
+					&__title
+						a
+							font-weight: bold
+							font-size: 13.5px
+							line-height: normal
+							color: #333333
+					&__desc
+						margin-bottom: 10px
+
+						p
+							font-weight: normal
+							font-size: 10.5px
+							line-height: 13px
+							color: #333333
+							opacity: 0.7
+							margin-bottom: 0
+							overflow: hidden
+							display: -webkit-box
+							text-overflow: ellipsis
+							-webkit-box-orient: vertical
+							-webkit-line-clamp: 2
+			@media screen and ( max-width: 575px )
+				.slide-inner
+					&_content
+						&__title
+							a
+								font-size: 10px
+						&__desc
+							p
+								font-size: 9px
+		.middle-block
+			padding-bottom: 16px
+			border-top: 1px solid $white
+			border-bottom: 1px solid $white
+			&_item
+				position: relative
+				&__img
+					a
+						+img-ratio(183/359)
+						img
+							filter: drop-shadow(1.09013px 1.09013px 5.45063px rgba(0, 0, 0, 0.07))
+							border-radius: 20px
+				&__content
+					width: 100%
+					position: absolute
+					bottom: 0
+					left: 0
+					display: flex
+					flex-direction: row
+					align-items: center
+					justify-content: space-between
+					padding: 24px 8px 12px
+					border-bottom-left-radius: 20px
+					border-bottom-right-radius: 20px
+					background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0.3%, rgba(0, 0, 0, 0.58) 83.1%)
+					.desc
+						a
+							font-weight: 800
+							font-size: 24px
+							line-height: 110%
+							color: #FFFFFF
+						p
+							font-weight: normal
+							font-size: 10.5px
+							line-height: 13px
+							color: #FFFFFF
+							opacity: 0.7
+			@media screen and ( max-width: 575px )
+				&_item
+					&__content
+						.desc
+							a
+								font-size: 10px
+							p
+								font-size: 9px
+		.bottom-block
+			padding-top: 16px
+			.list
+				&-item
+					padding: 0 4px
+					flex: 1 0 33.333%
+					min-height: 111px
+					filter: drop-shadow(1.21795px 1.21795px 6.08974px rgba(0, 0, 0, 0.07))
+					border-radius: 8px
+					&:nth-child(1)
+						padding-left: 0
+					&__img
+						a
+							+img-ratio(57/114)
+							img
+								border-top-right-radius: 8px
+								border-top-left-radius: 8px
+					&__content
+						background: $white
+						text-align: center
+						border-bottom-right-radius: 8px
+						border-bottom-left-radius: 8px
+						padding: 4px 12px 8px 12px
+						.desc
+							a
+								font-size: 13.5px
+								color: $black
+								font-weight: 700
+						.btn-small
+							width: 90px
+							height: 23px
+							font-size: 10px
+							font-weight: 500
+							&::before
+								display: none
+			@media screen and ( max-width: 575px )
+				.list
+					&-item
+						&__content
+							.desc
+								a
+									font-size: 10px

@@ -1,0 +1,23 @@
+section.section.product-related(setBackground="./images/bg-1.jpg")
+    .container 
+        h2.title.title_small.title_small-white Sản phẩm liên quan
+        .product-slide
+            .swiper-container
+                .swiper-wrapper
+                    -for(i=2; i<6; i++)
+                        .swiper-slide
+                            .slide-inner
+                                .slide-inner_img
+                                    a(href="")
+                                        img(src="./images/customer-"+i+".png", alt="")
+                                .slide-inner_content
+                                    .slide-inner_content__title 
+                                        a(href="") 
+                                            p Tài khoản thanh toán trực tuyến
+                                    .slide-inner_content__desc 
+                                        p Gửi và rút tiền mặt tiện lợi. Nhận chuyển khoản 24/7.
+                                    a.btn-small(href="") 
+                                        p Mở sổ tiết kiệm
+
+            .swiper-button-next
+            .swiper-button-prev

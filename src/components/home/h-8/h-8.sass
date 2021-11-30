@@ -1,0 +1,107 @@
+$black: #333
+$main: #F00020
+$body: #ffffff
+$white: #ffffff
+$gray: #B6BEC8
+$yellow: #FFD643
+$pink: #FF8B9B
+$pink-2: #FFA6C6
+$yellow-2: #FFCF6C
+$purple: #A8A0FF
+$blue-1: #62E4F2
+$blue-2: #87D4FF
+$green: #C3E57A
+$orange: #FF9854
+$opacity: rgba($color: $main, $alpha: .6)
+$gradient: linear-gradient(167.6deg, #FFD149 7.65%, #E0242C 71.52%, #CB0817 89.4%)
+$tran: transparent
+@function r($size)
+	@return ($size/16px)*1rem
+=img-ratio($ratio,$fit:cover)
+	position: relative
+	display: block
+	overflow: hidden
+	padding-top: $ratio *100%
+	img,iframe,video
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: $fit
+		transition: .3s ease-in-out all
+.new-hdbank
+	.new-slide
+		position: relative
+		.slide-inner
+			position: relative
+			filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.12))
+			backdrop-filter: blur(18px)
+			.img
+				+img-ratio(450/365)
+				img
+					border-radius: 16px
+			.wrap-content
+				padding: 24px 32px
+				position: absolute
+				bottom: 0
+				left: 0
+				display: flex
+				flex-direction: column
+				.name
+					font-weight: bold
+					font-size: 14px
+					line-height: 20px
+					color: #FFFFFF
+					margin-bottom: 12px
+				.detail
+					position: relative
+					font-weight: 500
+					font-size: 12px
+					line-height: 18px
+					color: #F9FAFC
+					width: max-content
+					&::after
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						right: -30px
+						content: '\f1df'
+						font-family: Material Icons
+						font-size: r(20px)
+						color: $black
+						width: 24px
+						height: 24px
+						background: $yellow
+						border-radius: 50%
+						display: flex
+						align-items: center
+						justify-content: center
+		.swiper-pagination
+			width: 100%
+			@media screen and ( min-width: 1025px )
+				display: none
+			@media screen and ( max-width: 1024px )
+				&-bullet
+					width: 10px
+					height: 10px
+					background: #ECECEC !important
+					opacity: 1
+					margin-right: 8px
+					&-active
+						background: $main !important
+		.swiper-button-next,
+		.swiper-button-prev
+			border: 1px solid $black
+			&::before
+				color: $black
+			&:hover
+				background: $gray
+			@media screen and ( max-width: 1024px )
+				display: none
+		@media screen and ( max-width: 1024px )
+			padding-bottom: 24px
+		.btn-viewmore
+			margin-top: 50px
+			@media screen and ( min-width: 1025px )
+				display: none

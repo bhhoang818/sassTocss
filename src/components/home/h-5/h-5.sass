@@ -1,0 +1,244 @@
+$black: #333
+$main: #F00020
+$body: #ffffff
+$white: #ffffff
+$gray: #B6BEC8
+$yellow: #FFD643
+$pink: #FF8B9B
+$pink-2: #FFA6C6
+$yellow-2: #FFCF6C
+$purple: #A8A0FF
+$blue-1: #62E4F2
+$blue-2: #87D4FF
+$green: #C3E57A
+$orange: #FF9854
+$opacity: rgba($color: $main, $alpha: .6)
+$gradient: linear-gradient(167.6deg, #FFD149 7.65%, #E0242C 71.52%, #CB0817 89.4%)
+$tran: transparent
+@function r($size)
+	@return ($size/16px)*1rem
+=img-ratio($ratio,$fit:cover)
+	position: relative
+	display: block
+	overflow: hidden
+	padding-top: $ratio *100%
+	img,iframe,video
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: $fit
+		transition: .3s ease-in-out all
+.banner-innerhome
+	padding-bottom: 89px
+	@media screen and ( max-width: 991.98px )
+		padding-bottom: 40px
+	.big-banner
+		margin-bottom: 42px
+		position: relative
+		.swiper-inner
+			position: relative
+			.image
+				a
+					+img-ratio(696/1440)
+				&.mobile
+					a
+						+img-ratio(512/375)
+			.wrap-content
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				left: 12%
+				max-width: 957px
+				.slide-title
+					margin-bottom: 54px
+					p
+						margin-bottom: 0
+						&.small-text
+							font-weight: 600
+							font-size: r(36px)
+							line-height: 112.6%
+							color: $black
+							@media screen and ( max-width: 1366px )
+								font-size: r(26px)
+						&.big-text
+							font-style: normal
+							font-weight: 800
+							font-size: r(72px)
+							line-height: 112.6%
+							color: $main
+							@media screen and ( max-width: 1366px )
+								font-size: r(62px)
+				.list
+					padding-left: 0
+					li
+						padding: 4px 0
+						display: flex
+						align-items: center
+						p
+							display: inline-block
+							padding-left: 14px
+							margin-bottom: 0
+							font-weight: 400
+							font-size: 20px
+							line-height: 29px
+							color: $black
+							span
+								font-weight: 800
+							@media screen and ( max-width: 1366px )
+								font-size: r(18px)
+
+		.swiper-pagination
+			position: absolute
+			top: auto
+			bottom: 10% !important
+			left: 16.8%
+			width: 112px !important
+			text-align: left
+			&-bullet
+				width: 16px
+				height: 16px
+				border-radius: 50%
+				&:focus
+					outline: none !important
+				&-active
+					background: #333 !important
+					&:focus
+						outline: none !important
+			@media screen and ( max-width: 1024px )
+				bottom: 0 !important
+			@media screen and ( max-width: 575px )
+				left: 24px
+				&-bullet
+					width: 10px
+					height: 10px
+					&-active
+						background: $main !important
+
+		.swiper-button-next,
+		.swiper-button-prev
+			border: 1px solid $black
+			&::before
+				color: $black
+			@media screen and ( max-width: 768px )
+				display: none
+		.swiper-button-next
+			right: 40px !important
+		.swiper-button-prev
+			left: 40px !important
+
+	.endo-wrap
+		position: relative
+		.title-wrap
+			margin: 0 30px
+			display: flex
+			align-items: center
+			justify-content: space-between
+			margin-bottom: 26px
+			max-width: 1280px
+			margin-left: 125px
+			h2
+				font-weight: bold
+				font-size: 20px
+				line-height: 29px
+				color: $black
+			.btn-all
+				font-weight: 500
+				font-size: 16px
+				line-height: 23px
+				color: #BCC0CC
+				display: flex
+				align-items: center
+				&::after
+					padding-top: 3px
+					padding-left: 3px
+					content: '\f1df'
+					font-family: Material Icons
+					font-size: r(20px)
+			@media screen and ( max-width: 991.98px )
+				margin-left: 0
+				h2
+					font-size: 14px
+				.btn-all
+					font-size: 14px
+		.slide-endo
+			position: relative
+			margin: 0 auto
+			max-width: 1280px
+			.swiper-container
+			.slide-inner
+				position: relative
+				padding: 24px
+				background: $white
+				box-shadow: 2px 2px 17px -4px rgba(0, 0, 0, 0.19)
+				border-radius: 20px
+				border: 1px solid $tran
+				transition: all ease-in-out .3s
+				.brand
+					width: max-content
+					padding: 4px 8px
+					border-radius: 2px
+					margin-bottom: 12px
+					span
+						font-weight: 500
+						font-size: 10px
+						color: $white
+						text-transform: uppercase
+						display: flex
+						align-items: center
+					&.red
+						background: $main
+					&.blue
+						background: #009DF5
+					&.yellow
+						background: #FFBB0D
+				.wrap-content
+					margin-bottom: 12px
+					p
+						margin-bottom: 0
+						font-weight: bold
+						font-size: 16px
+						line-height: 23px
+						color: #333333
+				.date-time
+					span
+						font-weight: 500
+						font-size: r(12px)
+						line-height: 18px
+						color: $black
+						opacity: .8
+				&:hover
+					border: 1px solid #BCC0CC
+					box-shadow: 2px 39px 30px -16px rgba(0, 0, 0, 0.21)
+			&::after
+				position: absolute
+				top: 0
+				right: -26px
+				content: ''
+				width: 239px
+				height: 260px
+				z-index: 2
+				pointer-events: none
+				background: linear-gradient(90deg, rgba(255, 255, 255, 0) -18.99%, #FFFFFF 49.64%)
+				@media screen and ( max-width: 768px )
+					display: none
+.btn-detail
+	margin-top: 24px
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 16px 24px
+	width: 146px
+	height: 58px
+	border: 1px solid #333333
+	border-radius: 50px
+	color: $black
+	&::before
+		content: '\f1df'
+		font-family: Material Icons
+		padding-top: 3px
+		padding-right: 13px
+	@media screen and ( max-width: 1366px )
+		height: 48px
+		padding: 0 16px

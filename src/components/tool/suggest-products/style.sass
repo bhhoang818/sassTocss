@@ -1,0 +1,114 @@
+$black: #333
+$main: #F00020
+$body: #ffffff
+$white: #ffffff
+$gray: #B6BEC8
+$yellow: #FFD643
+$pink: #FF8B9B
+$pink-2: #FFA6C6
+$yellow-2: #FFCF6C
+$purple: #A8A0FF
+$blue-1: #62E4F2
+$blue-2: #87D4FF
+$green: #C3E57A
+$orange: #FF9854
+$opacity: rgba($color: $main, $alpha: .6)
+$gradient: linear-gradient(167.6deg, #FFD149 7.65%, #E0242C 71.52%, #CB0817 89.4%)
+$tran: transparent
+@function r($size)
+    @return ($size/16px)*1rem
+=img-ratio($ratio,$fit:cover)
+    position: relative
+    display: block
+    overflow: hidden
+    padding-top: $ratio *100%
+    img,iframe,video
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        object-fit: $fit
+        transition: .3s ease-in-out all
+.suggest-product
+    .product-list
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        .product-item
+            flex: 1 0 20%
+            padding: 0 5.5px
+            &_wrap
+                background: rgba(255, 255, 255, 0.94)
+                box-shadow: 1.21795px 1.21795px 6.08974px rgba(0, 0, 0, 0.07)
+                border-radius: 12px
+                &__img
+                    a
+                        +img-ratio(144/238)
+                        border-top-left-radius: 20px
+                        border-top-right-radius: 20px
+                &__content
+                    padding: 16px
+                    &-title
+                        margin-bottom: 8px
+                        a
+                            p
+                                font-weight: 700
+                                font-size: 18px
+                                line-height: 110%
+                                margin-bottom: 0
+                                color: $black
+                    &-desc
+                        p
+                            font-size: 14px
+                            line-height: 20px
+                            color: #333333
+                            opacity: 0.7
+                            margin-bottom: 13px
+                    .btn-small
+                        width: 180px
+        @media screen and (max-width: 1199.98px )
+            .product-item
+                flex: 1 0 50%
+                margin-bottom: 16px
+                &_wrap
+                    &__content
+                        padding: 8px
+                        &-title
+                            a
+                                p
+                                    font-size: r(13.5px)
+                        &-desc
+                            p
+                                font-size: r(12px)
+                                margin-bottom: 0
+                        .btn-small
+                            margin-top: 8px
+                            width: auto
+                &:last-child
+                    display: none
+        @media screen and (max-width: 575.98px )
+            .product-item
+                flex: 1 0 50%
+                width: 50%
+                &_wrap
+                    &__content
+                        &-title
+                            margin-bottom: 0
+                            a
+                                p
+                                    font-size: r(10px)
+                        &-desc
+                            p
+                                font-size: r(9px)
+                                line-height: 13px
+    .viewmore
+        display: block
+        margin-top: 40px
+        font-size: 20px
+        line-height: 29px
+        color: #6F7279
+        text-align: center
+        @media screen and ( max-width: 575.98px )
+            margin-top: 8px
+            font-size: r(14px)
