@@ -1,0 +1,78 @@
+.loan-block {
+  padding-top: 2.5rem;
+}
+.loan-block .loan-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 48px 32px;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+.loan-block .loan-list.bg-pink {
+  background: #FFF9E2;
+  box-shadow: none;
+}
+.loan-block .loan-list_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  flex: 1 0 33.3333%;
+}
+.loan-block .loan-list_item__img {
+  width: auto;
+  min-height: 180px;
+  height: 100%;
+}
+.loan-block .loan-list_item__content {
+  padding: 16px;
+}
+.loan-block .loan-list_item__content-title {
+  text-align: center;
+  padding-bottom: 16px;
+}
+.loan-block .loan-list_item__content-title p {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 35px;
+  color: #000000;
+}
+.loan-block .loan-list_item__content-desc ul {
+  padding-left: 0;
+  list-style-type: disc !important;
+}
+.loan-block .loan-list_item__content-desc ul li p {
+  font-size: 16px;
+  line-height: 23px;
+  color: #000000;
+}
+.loan-block .loan-list .loan-list_item + .loan-list_item {
+  padding-left: 24px;
+}
+@media (max-width: 768.98px) {
+  .loan-block {
+    padding-bottom: 2rem;
+  }
+  .loan-block .loan-list {
+    padding: 0 24px;
+    box-shadow: none;
+  }
+  .loan-block .loan-list_item {
+    flex: 1 0 50%;
+  }
+}
+@media (max-width: 575.98px) {
+  .loan-block .loan-list {
+    flex-direction: column;
+  }
+  .loan-block .loan-list .loan-list_item + .loan-list_item {
+    margin-top: 40px;
+    padding-left: 0;
+  }
+}

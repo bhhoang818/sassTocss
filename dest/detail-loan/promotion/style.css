@@ -1,0 +1,10 @@
+.list-promotion .promo-area {
+  max-width: 1175px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768.98px) {
+  .list-promotion .promo-area {
+    max-width: unset;
+  }
+}

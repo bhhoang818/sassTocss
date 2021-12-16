@@ -1,0 +1,8 @@
+@media screen and (max-width: 575.86px) {
+  .loan-card-detail .loan-list {
+    padding-top: 32px !important;
+  }
+  .loan-card-detail .loan-list .loan-list_item .loan-list_item__img {
+    min-height: unset;
+  }
+}

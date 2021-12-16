@@ -1,0 +1,17 @@
+.util-tool {
+  border-top: 1px solid rgba(51, 51, 51, 0.4);
+}
+@media screen and (min-width: 767px) {
+  .util-tool {
+    display: none;
+  }
+}
+.util-tool #util-wrap .card-tool-box {
+  display: block;
+  position: inherit;
+  width: 100%;
+  background: none;
+  box-shadow: none;
+  backdrop-filter: unset;
+  border-radius: 0;
+}

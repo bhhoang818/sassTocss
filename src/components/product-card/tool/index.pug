@@ -1,0 +1,53 @@
+.ultility-tool-card
+	h2.title.title_small Tiện ích
+	.card-tool-box 
+		.card-switcher 
+			ul.header-switcher.d-flex.align-center 
+				li.active(rel="card-switcher-1")
+					| Ước tính ưu đãi
+				li(rel="card-switcher-2")
+					| Chọn thẻ phù hợp
+			#card-switcher-1.panel.active
+				.from-slide-loan
+					form(action="", method="post") 
+						.form-group
+							label(for="") Chọn loại thẻ
+							select.form-control
+								option(value="")  HDBank Vietjet VISA Premium
+								option(value="")  HDBank Vietjet VISA Premium
+						.form-group 
+							label(for='amount') Chi tiêu mỗi tháng
+							input#amount-promotion(type='text' readonly='' value="200 Triệu")
+						#slider-range-promotion
+						.range-slider__label 
+							.range-slider__label__min
+								span 1 triệu
+							.range-slider__label__max
+								span 500 triệu
+						.period-wraper 
+							p Số tiền được hoàn lại
+							.refunded
+								p.cash-refunded 150.000đ
+								p.percent-refund 3%
+						button.btn.btn-login
+							span Mở thẻ
+			#card-switcher-2.panel
+				.from-slide-loan
+					form(action="") 
+						.form-group
+							label(for="") Nhu cầu bạn quan tâm
+							select.form-control
+								option(value="") Tích lũy điểm thưởng
+								option(value="") Tích lũy điểm thưởng
+						.form-group 
+							label(for='amount') Thu nhập
+							input#amount-card(type='text' readonly='' value="20.000.000")
+							span.text vnd/tháng
+						#slider-range-card
+						.range-slider__label 
+							.range-slider__label__min
+								span 1 triệu
+							.range-slider__label__max
+								span 100 triệu
+						button.btn.btn-login
+							span Tìm thẻ

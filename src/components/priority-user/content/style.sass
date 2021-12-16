@@ -1,0 +1,289 @@
+$black: #333
+$main: #F00020
+$body: #ffffff
+$white: #ffffff
+$gray: #B6BEC8
+$yellow: #FFD643
+$pink: #FF8B9B
+$pink-2: #FFA6C6
+$yellow-2: #FFCF6C
+$purple: #A8A0FF
+$blue-1: #62E4F2
+$blue-2: #87D4FF
+$green: #C3E57A
+$orange: #FF9854
+$opacity: rgba($color: $main, $alpha: .6)
+$gradient: linear-gradient(167.6deg, #FFD149 7.65%, #E0242C 71.52%, #CB0817 89.4%)
+$tran: transparent
+@function r($size)
+	@return ($size/16px)*1rem
+=img-ratio($ratio,$fit:cover)
+	position: relative
+	display: block
+	overflow: hidden
+	padding-top: $ratio *100%
+	img,iframe,video
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: $fit
+		transition: .3s ease-in-out all
+.priority-user-content
+	max-width: 1024px
+	margin: 0 auto
+	.swiper-card-promotion-box
+		.title-box
+			display: none
+			@media ( max-width: 575.98px )
+				display: block
+				padding: 30px 0 !important
+		.swiper-card-promotion
+			position: relative
+			text-align: center
+			// margin-top: 50px
+			@media ( max-width: 575.98px )
+				margin: 0 auto
+				width: 80%
+			.gallery-thumbs
+				padding-bottom: 10px
+				padding-top: 50px
+				@media ( max-width: 575.98px )
+					padding-top: 15px
+			.swiper-slide-thumb-active
+				.item-card
+					font-weight: bold
+					// padding-top: 20px
+					.img-card
+						transform: scale(1.1)
+					.title-card
+						font-weight: 700
+						transition: all ease-in-out .3s
+
+						@media ( max-width: 575.98px )
+							font-size: 0.8rem
+					@media ( max-width: 575.98px )
+						.img-card
+							padding: 0 5px
+							img
+								transform: scale(1.3)
+								padding-bottom: 10px
+			.item-card
+				cursor: pointer
+				.img-card
+					transition: all ease-in-out .3s
+					transform: scale(1)
+					a
+						img
+							@media ( max-width: 575.98px )
+								width: 60px
+								height: 60px
+
+				.title-card
+					max-width: 154px
+					width: 100%
+					margin-left: auto
+					margin-right: auto
+					margin-top: 20px
+					font-size: 1rem
+					font-weight: 400
+					line-height: normal
+					color: #333333
+					text-align: center
+					@media ( max-width: 575.98px )
+						line-height: 14px
+						font-size: 0.78rem
+					.title
+						color: inherit
+						@media ( max-width: 575.98px )
+							font-size: 0.75rem
+				&.active
+					font-weight: bold
+			.swiper-button-next
+				border: none
+				display: none
+				right: -45px !important
+				top: 50px
+				@media ( max-width: 575.98px )
+					display: block
+			.swiper-button-prev
+				border: none
+				display: none
+				left: -45px !important
+				top: 50px
+				@media ( max-width: 575.98px )
+					display: block
+			.swiper-button-prev::before
+				display: none
+			.swiper-button-next::before
+				display: none
+		.info-box
+			margin-top: 20px
+			.panel
+				&.acitive
+					display: block
+					opacity: 1 !important
+			.info-paragraph
+				font-size: 1.75rem
+				line-height: 41px
+				text-align: center
+				margin-bottom: 10px !important
+				@media screen and ( max-width: 575.98px )
+					text-align: left
+					font-size: 0.875rem
+					line-height: 24px
+			.list-highlight
+				text-align: center
+				@media screen and ( max-width: 575.98px )
+					padding: 0
+					text-align: left
+				.item-highlight
+					font-size: 1.5rem
+					line-height: 35px
+					font-weight: 600
+					@media screen and ( max-width: 575.98px )
+						display: flex
+						align-items: flex-start
+						margin-bottom: 5px
+					.icon-check
+						display: none
+						margin-right: 7px
+						margin-top: 2px
+						@media screen and ( max-width: 575.98px )
+							display: block
+					.text-highlight
+						color: red
+					@media screen and ( max-width: 575.98px )
+						font-size: 0.875rem
+						line-height: 24px
+				&.list-uudai-dn
+					max-width: max-content
+					margin: auto
+					text-align: left
+					@media screen and ( max-width: 575.98px )
+						max-width: 100%
+					.item-highlight
+						.icon-check
+							display: inline
+							margin-top: -5px
+							margin-right: 12px
+							@media screen and ( max-width: 575.98px )
+								margin-right: 7px
+								margin-top: 2px
+	.customers-box
+		margin-top: 60px
+		@media screen and ( max-width: 768.98px )
+			margin-top: 10px
+		.list-customers
+			padding: 40px
+			box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12)
+			border-radius: 20px
+			position: relative
+			min-height: 630px
+			@media screen and ( max-width: 575.98px )
+				padding: 0 !important
+				box-shadow: none !important
+			.item-customer
+				margin-bottom: 20px
+				.left-box
+					height: 150px
+					position: relative
+					@media screen and ( max-width: 575.98px )
+						height: 106px
+					a
+						height: 100%
+						width: 100%
+						@media screen and ( max-width: 575.98px )
+							padding: 0
+						+img-ratio(211/686)
+						img
+							background: linear-gradient(360deg, #000000 -3.93%, rgba(0, 0, 0, 0) 39.15%), url(.png)
+							filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.12))
+							border-radius: 12px
+							// transition: all 0.5s ease-in-out
+							// @media screen and ( max-width: 575.98px )
+							//     height: auto
+						.name
+							color: white
+							position: absolute
+							bottom: 15px
+							left: 15px
+							font-size: 24px
+							line-height: 35px
+							display: flex
+							align-items: center
+							@media screen and ( max-width: 575.98px )
+								font-size: 1rem
+								line-height: 23px !important
+							.arrow
+								background: url(../../../images/priority-user/Arrow-Right.png)
+								width: 20px
+								height: 20px
+								margin-top: 3px
+								margin-left: 6px
+								@media screen and ( max-width: 575.98px )
+									transform: rotate(-90deg)
+									margin: 6px 0 0 10px
+				.right-box
+					position: absolute
+					padding-left: 30px
+					top: 30px
+					right: 0
+					padding-right: 30px
+					max-height: 560px
+					overflow-x: auto
+					@media screen and ( max-width: 575.98px )
+						padding-left: calc(var(--bs-gutter-x)*0.5) !important
+						position: relative !important
+						padding-right: calc(var(--bs-gutter-x)*0.5) !important
+						// margin-top: -30px;
+						// margin-bottom: 30px;
+						top: 0
+						overflow-x: unset
+						max-height: unset
+					.info-box
+						margin-top: 0
+						// position: absolute
+						display: none
+						@media screen and ( max-width: 575.98px )
+							position: relative !important
+							box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12)
+							border-radius: 20px
+							padding: 16px
+							margin-top: 10px !important
+						.name
+							font-weight: bold
+							font-size: 2rem
+							line-height: 47px
+							@media screen and ( max-width: 575.98px )
+								display: none
+						.description
+							font-size: 1.25rem
+							line-height: 29px
+							@media screen and ( max-width: 575.98px )
+								font-size: 0.75rem
+								line-height: 18px
+							ul
+								li
+									list-style: initial
+				&.active
+					.left-box
+						@media screen and ( max-width: 575.98px )
+							height: 45px
+						a
+							img
+								@media screen and ( max-width: 575.98px )
+									height: 45px !important
+							.name
+								@media screen and ( max-width: 575.98px )
+									top: 0
+									height: 100%
+								.arrow
+									@media screen and ( max-width: 575.98px )
+										transform: rotate(90deg)
+										margin: 0 0 0 10px
+					.right-box
+						display: block
+						.info-box
+							display: block

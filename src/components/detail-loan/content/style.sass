@@ -1,0 +1,95 @@
+$black: #333
+$main: #F00020
+$body: #ffffff
+$white: #ffffff
+$gray: #B6BEC8
+$yellow: #FFD643
+$pink: #FF8B9B
+$pink-2: #FFA6C6
+$yellow-2: #FFCF6C
+$purple: #A8A0FF
+$blue-1: #62E4F2
+$blue-2: #87D4FF
+$green: #C3E57A
+$orange: #FF9854
+$opacity: rgba($color: $main, $alpha: .6)
+$gradient: linear-gradient(167.6deg, #FFD149 7.65%, #E0242C 71.52%, #CB0817 89.4%)
+$tran: transparent
+@function r($size)
+	@return ($size/16px)*1rem
+=img-ratio($ratio,$fit:cover)
+	position: relative
+	display: block
+	overflow: hidden
+	padding-top: $ratio *100%
+	img,iframe,video
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: $fit
+		transition: .3s ease-in-out all
+.loan-block
+	padding-top: r(40px)
+
+	.loan-list
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		align-items: flex-start
+		padding: 48px 32px
+		max-width: 1280px
+		width: 100%
+		margin: 0 auto
+		background: #FFFFFF
+		box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15)
+		border-radius: 20px
+		&.bg-pink
+			background: #FFF9E2
+			box-shadow: none
+		&_item
+			display: flex
+			align-items: center
+			justify-content: space-between
+			flex-direction: column
+			flex: 1 0 33.3333%
+			&__img
+				width: auto
+				min-height: 180px
+				height: 100%
+			&__content
+				padding: 16px
+				&-title
+					text-align: center
+					padding-bottom: 16px
+					p
+						font-weight: bold
+						font-size: 24px
+						line-height: 35px
+						color: #000000
+
+				&-desc
+					ul
+						padding-left: 0
+						list-style-type: disc !important
+						li
+							p
+								font-size: 16px
+								line-height: 23px
+								color: #000000
+		.loan-list_item + .loan-list_item
+			padding-left: 24px
+	@media (max-width: 768.98px)
+		padding-bottom: r(32px)
+		.loan-list
+			padding: 0 24px
+			box-shadow: none
+			&_item
+				flex: 1 0 50%
+	@media (max-width: 575.98px)
+		.loan-list
+			flex-direction: column
+			.loan-list_item + .loan-list_item
+				margin-top: 40px
+				padding-left: 0

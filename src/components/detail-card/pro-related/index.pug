@@ -1,0 +1,16 @@
+section.section.pro-related
+    .container 
+        h2.title.title_small-black Sản phẩm liên quan
+        .slide-related
+            .swiper-container
+                .swiper-wrapper
+                    -for(i=2; i<5; i++)
+                        .swiper-slide
+                            .slide-inner
+                                .slide-inner__img
+                                    a(href="")
+                                        img(src="./images/card-detail/card-"+i+".png", alt="")
+                                .slide-inner__content
+                                    a(href="") HDBank Visa Gold
+            .swiper-button-next
+            .swiper-button-prev

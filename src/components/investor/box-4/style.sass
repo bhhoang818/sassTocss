@@ -1,0 +1,70 @@
+$black: #333
+$main: #F00020
+$body: #ffffff
+$white: #ffffff
+$gray: #B6BEC8
+$yellow: #FFD643
+$pink: #FF8B9B
+$pink-2: #FFA6C6
+$yellow-2: #FFCF6C
+$purple: #A8A0FF
+$blue-1: #62E4F2
+$blue-2: #87D4FF
+$green: #C3E57A
+$orange: #FF9854
+$opacity: rgba($color: $main, $alpha: .6)
+$gradient: linear-gradient(167.6deg, #FFD149 7.65%, #E0242C 71.52%, #CB0817 89.4%)
+$tran: transparent
+@function r($size)
+	@return ($size/16px)*1rem
+=img-ratio($ratio,$fit:cover)
+	position: relative
+	display: block
+	overflow: hidden
+	padding-top: $ratio *100%
+	img,iframe,video
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: $fit
+		transition: .3s ease-in-out all
+.section.investor-content
+	.more-news-box
+		.more-news-container
+			.more-news-item
+				margin-bottom: 20px
+				position: relative
+				border-radius: 12px
+				a
+					+img-ratio(240/504)
+					img
+						border-radius: 12px
+				.info-box-container
+					width: 100%
+					height: 100%
+					position: absolute
+					top: 0
+					bottom: 0
+					background: linear-gradient(1turn,rgba(0,0,0,.75) 11.34%,transparent 35.88%)
+					border-radius: 12px
+					.info-box
+						position: absolute
+						bottom: 20px
+						left: 20px
+						font-weight: 800
+						font-size: 24px
+						line-height: 35px
+						a
+							color: white
+						@media screen and ( max-width: 768px )
+							bottom: 10px
+							.title-news
+								font-size: 1rem
+				&.top1
+					a
+						+img-ratio(400/1024)
+					@media screen and ( max-width: 575.98px )
+						a
+							+img-ratio(240/504)

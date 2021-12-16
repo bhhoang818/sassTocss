@@ -32,113 +32,57 @@ $tran: transparent
 		transition: .3s ease-in-out all
 .card-hdbank
 	.block-desktop
-		.swiper-card
+		max-width: 1240px
+		width: 100%
+		margin: 0 auto
+		display: flex
+		flex-direction: row
+		.slide-card + .slide-card
+			margin-left: 8px
+		.slide-card
+			flex: 1 0 33.333%
+			max-width: 33.33333%
+			width: 100%
+			background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15))
+			border: 1px solid rgba(255, 255, 255, 0.35)
+			box-sizing: border-box
+			backdrop-filter: blur(20px)
+			border-radius: 20px
 			position: relative
-			max-width: 1198px
-			margin: 0 auto
-			.slide-inner
-				padding: 24px
-				min-height: 570px
-				background: rgba(255, 255, 255, 0.2)
-				border: 1px solid rgba(255, 255, 255, 0.35)
-				box-sizing: border-box
-				backdrop-filter: blur(20px)
-				border-radius: 20px
-				display: flex
-				flex-direction: column
-				justify-content: center
-				align-items: center
-				transition: background 0.3s ease-out
-				@media screen and ( min-width: 1400px )
-					max-width: 100%
-				@media screen and ( max-width: 1366px )
-					max-width: 100%
-				.img-card
-					position: relative
-					.icon
-						position: absolute
-						top: -16px
-						right: -16px
-					a,
-					.icon
-						img
-							transition: all ease-in-out .3s
-				.title-card
-					display: flex
-					flex-direction: column
-					justify-content: center
-					align-items: center
-					margin-top: 16px
-					padding: 0 30px
-
-					.title
-						font-weight: 500
-						font-size: 18px
-						line-height: 26px
-						text-align: center
-						color: $white
-					.btn-login
-						width: 120px
-						height: 42px
-						padding: 0 !important
-						display: flex
-						align-items: center
-						justify-content: center
-						span
-							font-weight: bold
-							font-size: 18px
-							line-height: 26px
-							color: $black
-						&:hover
-							span
-								color: $white
-							&::after
-								right: 8px
-				&.small-img
-					justify-content: space-between
-					padding-top: 30%
+			transition: background 0.3s ease-out
+			cursor: pointer
+			@media screen and ( min-width: 1025px )
 				&:hover
-					background: rgba(255, 255, 255, .4)
-					.img-card
-						a,
-						.icon
-							img
-								transform: scale(1.05)
-			@media screen and ( min-width: 1366px )
-				max-width: 80vw
-		@media screen and ( max-width: 1024.98px )
-			display: none
-	.block-mobile
-		@media screen and ( min-width: 1025px )
-			display: none
-		.slide-card_mobile
-			position: relative
+					background: rgba(255, 255, 255, 0.4)
+					.swiper-button-next,
+					.swiper-button-prev
+						opacity: 1
+						visibility: visible
 			h3
 				font-weight: bold
 				font-size: 20px
 				line-height: 29px
 				color: #FFFFFF
 				text-align: center
+				@media screen and ( min-width: 1025px )
+					display: none
 			.slide-inner
 				display: flex
 				flex-direction: column
 				justify-content: center
 				align-items: center
 				width: 100%
+				min-height: 573px
 				height: 100%
-				min-height: 448px
 				.img-card
 					position: relative
-					width: 100%
-					display: flex
-					justify-content: center
+					margin: auto 0
 					a
-						position: relative
 						text-align: center
 					.icon
 						position: absolute
 						top: -10px
-						right: -50px
+						right: -30px
 						width: 90px
 						height: 90px
 						img
@@ -146,6 +90,9 @@ $tran: transparent
 							height: 100%
 							transform: scale(.8)
 				.title-card
+					display: flex
+					align-items: center
+					flex-direction: column
 					padding: 20px
 					text-align: center
 					opacity: 0
@@ -153,19 +100,26 @@ $tran: transparent
 					transition: all ease-in-out .3s
 					.name
 						font-weight: bold
-						font-size: 14px
-						line-height: 20px
+						font-size: 18px
+						line-height: 26px
+						font-weight: 500
 						color: #FFFFFF
 					.btn-login
-						width: 100%
+						width: 118px
 						height: 44px
 						margin-top: 13px
 						padding: 8px 29px 10px 33px !important
+						p
+							margin-left: 0
 						&::after
-							right: calc( 100% - 50px )
+							right: calc( 100% - 26px )
 							top: 59%
-						@media screen and ( max-width: 575px )
-							width: 70%
+						&:hover
+							p
+								transform: translateX(-16px)
+							&::after
+								right: 16px
+				
 			.swiper-slide
 				&-active
 					.slide-inner
@@ -174,18 +128,42 @@ $tran: transparent
 							visibility: visible
 			.swiper-button-next,
 			.swiper-button-prev
-				top: auto
-				bottom: 20px
+				top: 40%
+				opacity: 0
+				visibility: hidden
+				transition: all ease-in-out .3s
 			.swiper-button-next
-				right: 0 !important
+				right: 10px !important
 			.swiper-button-prev
-				left: 0 !important
-		.btn-view-all
-			border: 0
-			&:hover
-				border: 1px solid $white
+				left: 10px !important
+	@media screen and ( max-width: 1024.98px )
+		padding-top: 16px
+		.block-desktop
+			flex-direction: column
+			.slide-card + .slide-card
+				margin-left: 0
+				margin-top: 16px
+			.slide-card
+				max-width: 100%
 				background: none
-				color: $white
+				border: 0
+				box-shadow: none
+				backdrop-filter: none
+				.slide-inner 
+					max-height: 448px
+					height: 100%
+					.title-card
+						width: 100%
+						.name
+							font-size: 14px
+							line-height: 20px
+						.btn-login
+							width: 100%
+							height: 44px
+				.swiper-button-next
+					right: -10px !important
+				.swiper-button-prev
+					left: -10px !important
 .btn-view-all
 	display: flex
 	flex-direction: row
@@ -213,6 +191,7 @@ $tran: transparent
 		font-size: r(18px)
 		font-weight: 700
 		transition: all ease-in-out .3s
+		transform: translateY(-50%) rotate(0deg)
 	&:hover
 		background: $white
 		color: #000

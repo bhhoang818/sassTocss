@@ -1,0 +1,91 @@
+.hot-line {
+  padding-top: 3.75rem;
+}
+.hot-line .hotline-wrapper {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  background: linear-gradient(167.6deg, #FFD149 7.65%, #E0242C 71.52%, #CB0817 89.4%), #C4C4C4;
+  border-radius: 20px;
+}
+.hot-line .hotline-wrapper .hotline-img {
+  flex-grow: 1;
+  min-width: 874px;
+}
+.hot-line .hotline-wrapper .hotline-img img {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.hot-line .hotline-wrapper .hotline-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 0;
+  padding: 0 48px;
+}
+.hot-line .hotline-wrapper .hotline-content .icon span {
+  font-size: 24px;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+.hot-line .hotline-wrapper .hotline-content .icon span img {
+  width: 38px;
+  height: 38px;
+}
+.hot-line .hotline-wrapper .hotline-content .icon .number p {
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 79px;
+  color: #FFFFFF;
+}
+.hot-line .hotline-wrapper .hotline-content .desc p {
+  font-size: 20px;
+  line-height: 29px;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 1440px) {
+  .hot-line .hotline-wrapper .hotline-img {
+    min-width: unset;
+  }
+  .hot-line .hotline-wrapper .hotline-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hot-line .hotline-wrapper .hotline-content {
+    padding: 24px;
+    display: flex;
+  }
+  .hot-line .hotline-wrapper .hotline-content .icon .number p {
+    font-size: 40.5px;
+  }
+}
+@media screen and (max-width: 768.98px) {
+  .hot-line .hotline-wrapper {
+    flex-direction: column;
+  }
+  .hot-line .hotline-wrapper .hotline-img img {
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+  }
+  .hot-line .hotline-wrapper .hotline-content {
+    flex-direction: row;
+    padding: 18px 8px;
+  }
+  .hot-line .hotline-wrapper .hotline-content .icon span {
+    font-size: 14px;
+  }
+  .hot-line .hotline-wrapper .hotline-content .icon span img {
+    width: 19px;
+    height: 19px;
+    margin-right: 7px;
+  }
+  .hot-line .hotline-wrapper .hotline-content .icon .number p {
+    font-size: 22px;
+    line-height: normal;
+  }
+  .hot-line .hotline-wrapper .hotline-content .desc p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,130 @@
+.tool-card-product {
+  padding: 3.125rem 0;
+}
+.tool-card-product .title {
+  padding: 0 !important;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 1024.98px) {
+  .tool-card-product {
+    padding: 1rem 0;
+  }
+}
+.tool-card-product .card-product-promotion .tag-list .list-wrapper_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+.tool-card-product .card-product-promotion .tag-list .list-wrapper_item__img a {
+  width: 98px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding-top: 100%;
+  border-radius: 8px;
+}
+.tool-card-product .card-product-promotion .tag-list .list-wrapper_item__img a img, .tool-card-product .card-product-promotion .tag-list .list-wrapper_item__img a iframe, .tool-card-product .card-product-promotion .tag-list .list-wrapper_item__img a video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transition: 0.3s ease-in-out all;
+}
+.tool-card-product .card-product-promotion .tag-list .list-wrapper_item__content {
+  padding-left: 16px;
+}
+.tool-card-product .card-product-promotion .tag-list .list-wrapper_item__content-title a p {
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 29px;
+  color: #333;
+}
+.tool-card-product .card-product-promotion .tag-list .list-wrapper_item__content-desc p {
+  line-height: 23px;
+  color: #333;
+}
+.tool-card-product .card-product-promotion .tag-list .list-wrapper_item__content-date {
+  font-size: 10px;
+  line-height: 15px;
+  color: #333;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 769px) {
+  .tool-card-product .card-product-promotion .tag-list .list-wrapper_item__content-date {
+    display: none;
+  }
+}
+.tool-card-product .card-product-promotion .tag-list .list-wrapper_item:hover {
+  background: #FFF9E2;
+  box-shadow: 0px 14px 40px rgba(79, 51, 39, 0.1);
+  border-radius: 20px;
+}
+@media screen and (max-width: 1199.98px) {
+  .tool-card-product .card-product-promotion .tag-list .list-wrapper_item__img a {
+    width: 80px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding-top: 100%;
+  }
+  .tool-card-product .card-product-promotion .tag-list .list-wrapper_item__img a img, .tool-card-product .card-product-promotion .tag-list .list-wrapper_item__img a iframe, .tool-card-product .card-product-promotion .tag-list .list-wrapper_item__img a video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: 0.3s ease-in-out all;
+  }
+}
+@media screen and (max-width: 1024.98px) {
+  .tool-card-product .card-product-promotion {
+    padding: 24px 16px;
+  }
+  .tool-card-product .card-product-promotion .tag-list .list-wrapper_item {
+    padding: 16px 0;
+    justify-content: flex-start;
+    border-top: 1px dashed #DDE1EB;
+  }
+  .tool-card-product .card-product-promotion .tag-list .list-wrapper_item:nth-child(1) {
+    padding-top: 0;
+    border-top: 0;
+  }
+  .tool-card-product .card-product-promotion .tag-list .list-wrapper_item__img a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding-top: 100%;
+  }
+  .tool-card-product .card-product-promotion .tag-list .list-wrapper_item__img a img, .tool-card-product .card-product-promotion .tag-list .list-wrapper_item__img a iframe, .tool-card-product .card-product-promotion .tag-list .list-wrapper_item__img a video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: 0.3s ease-in-out all;
+  }
+  .tool-card-product .card-product-promotion .tag-list .list-wrapper_item__content {
+    height: 100%;
+    padding-left: 16px;
+  }
+  .tool-card-product .card-product-promotion .tag-list .list-wrapper_item__content-title a p {
+    font-size: 14px;
+  }
+  .tool-card-product .card-product-promotion .tag-list .list-wrapper_item__content-desc p {
+    font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 768.98px) {
+  .tool-card-product .card-product-promotion .tag-list .list-wrapper_item__content-desc {
+    display: none;
+  }
+}

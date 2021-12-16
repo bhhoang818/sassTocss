@@ -1,0 +1,63 @@
+.investor-news-box-3.news-main-content-box.tab-box
+    .row
+        .list-categories-box.tabs 
+            ul.list-categories.tab-list-categories
+                li.item-category.active(rel="panel-1")
+                    span.name-category Tin tức kinh doanh
+                li.item-category(rel="panel-2")
+                    span.name-category Thông tin nhà đầu tư
+                li.item-category(rel="panel-3")
+                    span.name-category Phát triển bền vững 
+            .panel.active#panel-1
+                .main-content
+                    ul.list-news 
+                        -for(i=1; i<6; i++)
+                            li.item-news
+                                .news-left-box
+                                    a(href="")
+                                        img(src="./images/news/news" + i + ".png")
+                                .news-right-box 
+                                    a(href="")
+                                        p.news-title HDBank khẳng định vị thế top 5 ngân hàng uy tín nhất Việt Nam thiệu khách hàng tham gia chương trình ưu đãi
+                                    p.news-description Ngân hàng TMCP Phát triển TP. Hồ Chí Minh (HDBank - mã chứng khoán: HDB)
+                                    p.news-date 29/11/2021
+            .panel#panel-2
+                .main-content
+                    ul.list-news 
+                        -for(i=1; i<6; i++)
+                            li.item-news
+                                .news-left-box
+                                    a(href="")
+                                        img(src="./images/news/news" + i + ".png")
+                                .news-right-box 
+                                    a(href="")
+                                        p.news-title Ưu đãi ngập tràn ngày 8/3 cùng thẻ HDBank VISA
+                                    p.news-description Khách hàng cá nhân đăng ký thành công "Cộng tác viên" và thực hiện giới thiệu khách hàng tham gia chương trình ưu đãi
+                                    p.news-date 29/11/2021
+            .panel#panel-3
+                .main-content
+                    ul.list-news 
+                        -for(i=1; i<6; i++)
+                            li.item-news
+                                .news-left-box
+                                    a(href="")
+                                        img(src="./images/news/news" + i + ".png")
+                                .news-right-box 
+                                    a(href="")
+                                        p.news-title HDBank tiếp tục tăng trưởng cao và bền vững giữa đại dịch
+                                    p.news-description Theo bà Nguyễn Thị Phương Thảo - Phó Chủ tịch thường trực HĐQT HDBank, 2021...
+                                    p.news-date 29/11/2021
+        .paging-box 
+            .btn-start 
+                img(src="./images/investor/btnstart.png")
+            .btn-prev 
+                img(src="./images/investor/btnprev.png")
+            ul.number-box 
+                span.number-text 1
+                span.number-text 2
+                span.number-text 3
+                span.dots-text ...
+            .btn-next 
+                img(src="./images/investor/btnnext.png")
+            .btn-end
+                img(src="./images/investor/btnend.png")

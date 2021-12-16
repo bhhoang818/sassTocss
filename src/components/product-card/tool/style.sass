@@ -1,0 +1,141 @@
+$black: #333
+$main: #F00020
+$body: #ffffff
+$white: #ffffff
+$gray: #B6BEC8
+$yellow: #FFD643
+$pink: #FF8B9B
+$pink-2: #FFA6C6
+$yellow-2: #FFCF6C
+$purple: #A8A0FF
+$blue-1: #62E4F2
+$blue-2: #87D4FF
+$green: #C3E57A
+$orange: #FF9854
+$opacity: rgba($color: $main, $alpha: .6)
+$gradient: linear-gradient(167.6deg, #FFD149 7.65%, #E0242C 71.52%, #CB0817 89.4%)
+$tran: transparent
+@function r($size)
+	@return ($size/16px)*1rem
+=img-ratio($ratio,$fit:cover)
+	position: relative
+	display: block
+	overflow: hidden
+	padding-top: $ratio *100%
+	img,iframe,video
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: $fit
+		transition: .3s ease-in-out all
+.tool-card-product
+	.ultility-tool-card
+		.card-tool-box
+			width: 100%
+			position: static
+			.card-switcher
+				.panel
+					.from-slide-loan
+						form
+							.form-group
+								&:nth-child(1)
+									margin-bottom: 25px
+									display: block
+									label
+										padding-bottom: 16px
+								label
+									font-size: r(20px)
+								select
+									padding: 12px 16px 12px 45px
+									width: 100%
+									background: #F9FAFC
+									border-radius: 40px
+									border: 0
+									font-size: 20px
+									line-height: 29px
+									color: $black
+								#amount-card
+									width: 125px
+									text-align: right
+									margin-left: auto
+								.text
+									font-size: 16px
+									line-height: 23px
+									color: #6F7279
+							.range-slider__label
+								&__min,
+								&__max
+									span
+										opacity: .5
+							.period-wraper
+								p
+								.refunded
+									margin-top: 16px
+									display: flex
+									align-items: center
+									position: relative
+									justify-content: center
+									padding: 8px 16px
+									background: #F9FAFC
+									border-radius: 40px
+									.cash-refunded
+										font-size: 24px
+										line-height: 35px
+										text-align: center
+										color: $black
+									.percent-refund
+										position: absolute
+										right: 10px
+										top: 50%
+										transform: translateY(-50%)
+										font-size: 20px
+										line-height: 29px
+										color: #BCC0CC
+									.cash-refunded,
+									.percent-refund
+										margin-bottom: 0
+										font-weight: 600
+		@media screen and ( max-width: 768.98px )
+			background-image: url('../images/producttion/bg-mb.png')
+			background-repeat: no-repeat
+			background-size: cover
+			padding: 24px 14px
+			.card-tool-box
+				background: $white
+				.card-switcher
+					.header-switcher
+						margin-bottom: 16px
+					.panel
+						.from-slide-loan
+							form
+								.form-group
+									&:nth-child(1)
+										label
+											padding-bottom: 8px
+									label
+										font-size: r(14px)
+									select
+										font-size: 1rem
+									input#amount-card
+										font-size: r(18px)
+										margin-bottom: 0
+									.text
+										font-size: r(14px)
+								.period-wraper
+									.refunded
+										.cash-refunded
+											font-size: r(18px)
+										.percent-refund
+											font-size: r(14px)
+	@media screen and ( max-width: 1024.98px )
+		.container
+			padding: 0 !important
+			.row
+				margin-right: 0
+				margin-left: 0
+				> .col,
+				> [class*="col-"]
+					padding-right: 0
+					padding-left: 0

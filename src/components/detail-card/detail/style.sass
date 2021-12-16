@@ -1,0 +1,154 @@
+$black: #333
+$main: #F00020
+$body: #ffffff
+$white: #ffffff
+$gray: #B6BEC8
+$yellow: #FFD643
+$pink: #FF8B9B
+$pink-2: #FFA6C6
+$yellow-2: #FFCF6C
+$purple: #A8A0FF
+$blue-1: #62E4F2
+$blue-2: #87D4FF
+$green: #C3E57A
+$orange: #FF9854
+$opacity: rgba($color: $main, $alpha: .6)
+$gradient: linear-gradient(167.6deg, #FFD149 7.65%, #E0242C 71.52%, #CB0817 89.4%)
+$tran: transparent
+@function r($size)
+	@return ($size/16px)*1rem
+=img-ratio($ratio,$fit:cover)
+	position: relative
+	display: block
+	overflow: hidden
+	padding-top: $ratio *100%
+	img,iframe,video
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: $fit
+		transition: .3s ease-in-out all
+.card-detail
+	padding-top: r(48px)
+	.wrapper-detail
+		max-width: 1184px
+		width: 100%
+		margin: 0 auto
+		&_img
+			max-width: 346px
+			width: 100%
+			text-align: center
+		&_title
+			margin-left: 40px
+			h1
+				font-weight: bold
+				font-size: 32px
+				line-height: 48px
+			.btn-login
+				margin-top: 24px
+				width: 200px
+				height: 56px
+				display: flex
+				justify-content: center
+				padding: 0 24px !important
+				p
+					font-size: 14px
+					margin-left: 0
+		&_content
+			max-width: 524px
+			width: 100%
+			padding: 24px
+			background: #F9FAFC
+			border-radius: 20px
+			margin-left: 20px
+			ul
+				width: 100%
+				padding-left: 0
+				li
+					display: flex
+					justify-content: space-between
+					p
+						span
+							font-weight: 700
+						&:first-child
+							font-weight: bold
+							font-size: 20px
+							line-height: 28px
+							flex-grow: 0
+						&:last-child
+							text-align: right
+							width: 48%
+							font-size: 20px
+							flex-grow: 1
+							padding-left: 120px
+					a
+						font-size: 16px
+						line-height: 23px
+						text-decoration: underline !important
+						color: $black !important
+					&:last-child
+						margin-top: 20px
+						border-top: 1px solid rgba($color: #BCC0CC, $alpha: .4)
+				li + li
+					padding-top: 20px
+	@media screen and ( max-width: 1199.98px )
+		padding-bottom: 0
+		.wrapper-detail
+			flex-wrap: wrap
+			flex-direction: row
+			&_title
+				margin-left: 30px
+				h1
+					font-size: 24px
+					line-height: 27px
+				.btn-login
+					width: 150px
+					height: 32px
+					p
+						font-size: 14px
+					&::after
+						display: none
+			&_content
+				margin-left: 0
+				margin-top: 16px
+				width: 100%
+				max-width: 100%
+				ul
+					li
+						p
+							&:first-child,
+							&:last-child
+								font-size: 15px
+						a
+							font-size: 14px
+
+	@media screen and ( max-width: 768.98px )
+		.wrapper-detail
+			flex-direction: column
+			align-items: center
+			&_title
+				display: flex
+				flex-direction: column
+				align-items: center
+				padding-top: 16px
+	@media screen and ( max-width: 768.98px )
+		.wrapper-detail
+			&_title
+				margin-left: 0
+				h1
+					text-align: center
+					font-size: 28px
+			&_content
+				ul
+					li
+						p
+							&:first-child,
+							&:last-child
+								font-size: 16px
+							&:last-child
+								padding-left: 15px
+						&:last-child
+							flex-direction: column
+							align-items: center

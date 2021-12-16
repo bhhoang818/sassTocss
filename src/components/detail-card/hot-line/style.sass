@@ -1,0 +1,111 @@
+$black: #333
+$main: #F00020
+$body: #ffffff
+$white: #ffffff
+$gray: #B6BEC8
+$yellow: #FFD643
+$pink: #FF8B9B
+$pink-2: #FFA6C6
+$yellow-2: #FFCF6C
+$purple: #A8A0FF
+$blue-1: #62E4F2
+$blue-2: #87D4FF
+$green: #C3E57A
+$orange: #FF9854
+$opacity: rgba($color: $main, $alpha: .6)
+$gradient: linear-gradient(167.6deg, #FFD149 7.65%, #E0242C 71.52%, #CB0817 89.4%)
+$tran: transparent
+@function r($size)
+    @return ($size/16px)*1rem
+=img-ratio($ratio,$fit:cover)
+    position: relative
+    display: block
+    overflow: hidden
+    padding-top: $ratio *100%
+    img,iframe,video
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        object-fit: $fit
+        transition: .3s ease-in-out all
+.hot-line
+    padding-top: r(60px)
+    .hotline-wrapper
+        display: flex
+        max-width: 1280px
+        margin: 0 auto
+        background: linear-gradient(167.6deg, #FFD149 7.65%, #E0242C 71.52%, #CB0817 89.4%), #C4C4C4
+        border-radius: 20px
+        .hotline-img
+            flex-grow: 1
+            min-width: 874px
+            img
+                border-top-left-radius: 20px
+                border-bottom-left-radius: 20px
+        .hotline-content
+            display: flex
+            align-items: flex-start
+            justify-content: center
+            flex-direction: column
+            flex-grow: 0
+            padding: 0 48px
+            .icon
+                span
+                    font-size: 24px
+                    color: #FFFFFF
+                    font-weight: 700
+                    img
+                        width: 38px
+                        height: 38px
+                .number
+                    p
+                        font-weight: 800
+                        font-size: 54px
+                        line-height: 79px
+                        color: #FFFFFF
+            .desc
+                p
+                    font-size: 20px
+                    line-height: 29px
+                    color: #FFFFFF
+    @media screen and ( max-width: 1440px )
+        .hotline-wrapper
+            .hotline-img
+                min-width: unset
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+            .hotline-content
+                padding: 24px
+                display: flex
+                .icon
+                    .number
+                        p
+                            font-size: 40.5px
+    @media screen and ( max-width: 768.98px )
+        .hotline-wrapper
+            flex-direction: column
+            .hotline-img
+                img
+                    border-top-right-radius: 20px
+                    border-bottom-left-radius: 0
+            .hotline-content
+                flex-direction: row
+                padding: 18px 8px
+                .icon
+                    span
+                        font-size: 14px
+                        img
+                            width: 19px
+                            height: 19px
+                            margin-right: 7px
+                    .number
+                        p
+                            font-size: 22px
+                            line-height: normal
+                .desc
+                    p
+                        font-size: 14px

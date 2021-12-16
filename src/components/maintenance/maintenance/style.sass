@@ -1,0 +1,107 @@
+$black: #333
+$main: #F00020
+$body: #ffffff
+$white: #ffffff
+$gray: #B6BEC8
+$yellow: #FFD643
+$pink: #FF8B9B
+$pink-2: #FFA6C6
+$yellow-2: #FFCF6C
+$purple: #A8A0FF
+$blue-1: #62E4F2
+$blue-2: #87D4FF
+$green: #C3E57A
+$orange: #FF9854
+$opacity: rgba($color: $main, $alpha: .6)
+$gradient: linear-gradient(167.6deg, #FFD149 7.65%, #E0242C 71.52%, #CB0817 89.4%)
+$tran: transparent
+@function r($size)
+	@return ($size/16px)*1rem
+=img-ratio($ratio,$fit:cover)
+	position: relative
+	display: block
+	overflow: hidden
+	padding-top: $ratio *100%
+	img,iframe,video
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: $fit
+		transition: .3s ease-in-out all
+.maintenance-section 
+	padding-top: 35px
+	padding-bottom: 135px
+	.page-container
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		.logo
+			margin-bottom: 32px
+
+		.page-content
+			.img
+				margin: 0 auto
+				width: 300px
+				height: 300px
+				text-align: center
+				margin-bottom: 8px
+				background-repeat: no-repeat
+				background-size: cover
+				background-blend-mode: multiply
+				mix-blend-mode: multiply
+			.page-title
+				margin-bottom: 47px
+				h1
+					font-weight: 800
+					font-size: 40px
+					line-height: 58px
+					text-align: center
+					color: #333333
+			.page-content
+				margin-bottom: 32px
+				p
+					font-weight: 500
+					font-size: 24px
+					line-height: 35px
+					text-align: center
+					color: #333333
+			.btn-login
+				margin: 0 auto
+				width: 240px
+				display: flex
+				align-items: center
+				justify-content: center
+				p
+					margin-left: 0
+	@media screen and ( max-width: 575.98px )
+		padding-top: 29px
+		padding-left: 37px
+		padding-right: 37px
+		.page-container
+			.logo
+
+			.page-content
+				.img
+					+img-ratio(172/172)
+				.page-title
+					h1
+						font-size: 24px
+						line-height: normal
+				.page-content
+					margin-bottom: 32px
+					p
+						font-size: 16px
+				.btn-login
+					margin: 0 auto
+					width: 206px
+					height: 46px
+					display: flex
+					align-items: center
+					justify-content: center
+					p
+						margin-left: 0
+					&::after
+						display: none

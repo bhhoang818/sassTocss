@@ -1,0 +1,118 @@
+.digital-store .digital-search {
+  padding: 48px 0px 0px;
+  background: url(.png), linear-gradient(96.95deg, #FFAC41 -30.56%, #E02709 64.19%);
+  height: 147px;
+  background-blend-mode: overlay, normal;
+  background-image: url("../images/digital-bg.jpg");
+  background-size: 100% 100%;
+}
+.digital-store .digital-search .form-search .form-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.digital-store .digital-search .form-search .form-group h2 {
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 125%;
+  color: #FFFFFF;
+  white-space: nowrap;
+  text-shadow: 0px 2px 5px rgba(90, 27, 0, 0.6);
+}
+.digital-store .digital-search .form-search .form-group .form-control {
+  margin-left: 48px;
+  padding: 16px 24px;
+  max-width: 988px;
+  height: 61px;
+  background: #F9FAFC;
+  border-radius: 42px;
+}
+.digital-store .digital-search .form-search .form-group .form-control::placeholder {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  color: #333;
+  opacity: 1;
+}
+.digital-store .digital-search .form-search .form-group .search-icon {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+}
+@media screen and (max-width: 1366px) {
+  .digital-store .digital-search .form-search .form-group h2 {
+    font-size: 1.5625rem;
+  }
+  .digital-store .digital-search .form-search .form-group .form-control {
+    height: 50px;
+  }
+  .digital-store .digital-search .form-search .form-group .form-control::placeholder {
+    font-weight: 500;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .digital-store .digital-search .form-search .form-group {
+    flex-direction: column;
+  }
+  .digital-store .digital-search .form-search .form-group h2 {
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+  }
+  .digital-store .digital-search .form-search .form-group .form-control {
+    margin-left: 0;
+    height: 40px;
+  }
+  .digital-store .digital-search .form-search .form-group .search-icon {
+    top: 75%;
+    right: 16px;
+  }
+}
+.digital-store .banner-digital {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding-top: 31.9444444444%;
+}
+.digital-store .banner-digital img, .digital-store .banner-digital iframe, .digital-store .banner-digital video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transition: 0.3s ease-in-out all;
+}
+.digital-store .banner-digital img {
+  object-position: 50% 30%;
+}
+@media screen and (max-width: 768px) {
+  .digital-store .banner-digital {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding-top: 72.9166666667%;
+  }
+  .digital-store .banner-digital img, .digital-store .banner-digital iframe, .digital-store .banner-digital video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: 0.3s ease-in-out all;
+  }
+  .digital-store .banner-digital img {
+    object-position: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .digital-store .digital-search {
+    height: auto;
+    padding: 50px 0 30px 0;
+  }
+}

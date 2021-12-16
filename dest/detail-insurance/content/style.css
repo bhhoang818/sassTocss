@@ -1,0 +1,76 @@
+.wrapper-insurance {
+  padding-top: 48px;
+}
+.wrapper-insurance .wrapper-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+.wrapper-insurance .wrapper-container .row {
+  margin: 0;
+}
+.wrapper-insurance .wrapper-container .col-12.col-xl-6 {
+  padding: 0;
+}
+.wrapper-insurance .wrapper-container .col-12.col-xl-6:nth-child(2n) {
+  border-left: 1px solid rgba(188, 192, 204, 0.4);
+  border-bottom: 1px solid rgba(188, 192, 204, 0.4);
+}
+.wrapper-insurance .wrapper-container .col-12.col-xl-6:nth-child(1) {
+  border-bottom: 1px solid rgba(188, 192, 204, 0.4);
+}
+.wrapper-insurance .wrapper-container .col-12.col-xl-6:nth-child(4) {
+  border-bottom: 0;
+}
+.wrapper-insurance .wrapper-container .wrap-item {
+  padding: 50px 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.wrapper-insurance .wrapper-container .wrap-item_img {
+  min-height: 166px;
+  height: 100%;
+  margin-bottom: 40px;
+}
+.wrapper-insurance .wrapper-container .wrap-item_content-title {
+  text-align: center;
+}
+.wrapper-insurance .wrapper-container .wrap-item_content-title p {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 35px;
+}
+.wrapper-insurance .wrapper-container .wrap-item_content-desc ul {
+  padding-left: 0;
+  list-style-type: disc !important;
+}
+.wrapper-insurance .wrapper-container .wrap-item_content-desc ul li p {
+  font-size: 16px;
+  line-height: 23px;
+}
+@media screen and (max-width: 1024.98px) {
+  .wrapper-insurance .wrapper-container {
+    box-shadow: none;
+  }
+  .wrapper-insurance .wrapper-container .wrap-item {
+    padding: 24px;
+  }
+  .wrapper-insurance .wrapper-container .wrap-item_img {
+    margin-bottom: 16px;
+  }
+  .wrapper-insurance .wrapper-container .wrap-item_content-title p {
+    font-size: 22px;
+  }
+  .wrapper-insurance .wrapper-container .row {
+    margin: auto;
+  }
+  .wrapper-insurance .wrapper-container .row .col-12.col-xl-6 {
+    padding: 0;
+    border: 0;
+  }
+}

@@ -1,0 +1,50 @@
+section.section.catelog-card 
+	.container 
+		h1.title.title_small Danh mục thẻ
+		.filter-catelog 
+			.form-group 
+				select.form-control
+					option(value="") Tất cả thẻ
+		.tag-list.tabs
+			.nav-list
+				ul.tab-list
+					li.active(rel="hashtag-1") 
+						p Cashback-hoàn tiền
+					li(rel="hashtag-2")
+						p Du lịch
+					li(rel="hashtag-3")
+						p Trả góp
+					li(rel="hashtag-4")
+						p Mua sắm
+					li(rel="hashtag-5")
+						p hashtag
+					li(rel="hashtag-6")
+						p hashtag
+			#hashtag-1.panel.hashtag-content.active
+				.row 
+					-for(i=1; i<11; i++)
+						.col-6.col-lg-4 
+							.card-list_item.specail-img 
+								.card-list_item__img 
+									a(href="")
+										img(src="./images/producttion/c-"+i+".png", alt="") 
+								.card-list_item__contennt 
+									.card-list_item__contennt-title 
+										a(href="")
+											p HDBank Vietjet Visa Premium
+									a.btn-small(href="") 
+										p Mở thẻ 
+			#hashtag-2.panel.hashtag-content
+				.row 
+					-for(i=1; i<11; i++)
+						.col-6.col-lg-4 
+							.card-list_item 
+								.card-list_item__img 
+									a(href="")
+										img(src="./images/producttion/c-"+i+".png", alt="") 
+								.card-list_item__contennt 
+									.card-list_item__contennt-title 
+										a(href="")
+											p HDBank Vietjet Visa Premium
+									a.btn-small(href="") 
+										p Mở thẻ 

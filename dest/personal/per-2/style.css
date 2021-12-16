@@ -1,0 +1,124 @@
+#accordian ul {
+  padding-left: 0;
+  border-radius: 20px;
+}
+#accordian ul ul {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12);
+  padding-left: 0;
+  display: none;
+}
+#accordian ul ul ul {
+  box-shadow: none;
+}
+#accordian li .wrap-title {
+  position: relative;
+}
+#accordian li .wrap-title .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 16px;
+  background: linear-gradient(360deg, #000000 -3.93%, rgba(0, 0, 0, 0) 70.15%);
+  filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.12));
+  border-radius: 12px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#accordian li .wrap-title .content a,
+#accordian li .wrap-title .content em {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 29px;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: all eas-in-out 0.3s;
+}
+#accordian li .wrap-title .img {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding-top: 32.9192546584%;
+  transition: all ease-in-out 0.3s;
+}
+#accordian li .wrap-title .img img, #accordian li .wrap-title .img iframe, #accordian li .wrap-title .img video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transition: 0.3s ease-in-out all;
+}
+#accordian li .wrap-title .img img {
+  border-radius: 12px;
+}
+#accordian li ul {
+  padding: 24px;
+}
+#accordian li ul li .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#accordian li ul li .content a,
+#accordian li ul li .content em {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 23px;
+  color: #333333;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: all eas-in-out 0.3s;
+}
+#accordian li ul li.active .content em {
+  transform: rotate(180deg);
+}
+#accordian li ul li ul {
+  padding: 0;
+}
+#accordian li ul li ul li {
+  margin-top: 0;
+  padding-top: 17px;
+}
+#accordian li ul li ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
+  color: #333333;
+}
+#accordian li ul li + li {
+  padding-top: 17px;
+  margin-top: 0;
+}
+#accordian li.active > ul {
+  display: block;
+}
+#accordian li.active .wrap-title .img {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding-top: 18.0124223602%;
+}
+#accordian li.active .wrap-title .img img, #accordian li.active .wrap-title .img iframe, #accordian li.active .wrap-title .img video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transition: 0.3s ease-in-out all;
+}
+#accordian li.active .wrap-title .content em {
+  transform: rotate(180deg);
+}
+#accordian li + li {
+  margin-top: 8px;
+}

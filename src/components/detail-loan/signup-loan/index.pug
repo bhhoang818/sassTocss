@@ -1,0 +1,52 @@
+section.section.loan-signup 
+    .container
+        .form-register 
+            .wrap-form 
+                .wrap-form_register 
+                    .wrap-form_register-title 
+                        p Đăng kí ngay
+                        p Hãy để lại thông tin của bạn, nhân viên HDBank sẽ liên hệ một cách sớm nhất!
+                    form(action="") 
+                        .form-group 
+                            input.form-control(type="text" required)
+                            label Họ và tên
+                            .icon 
+                                img(src="./images/icons/user-gray.png", alt="")
+                        .form-group 
+                            input.form-control(type="text" required)
+                            label(for="") Số điện thoại
+                                span *
+                            .icon 
+                                img(src="./images/icons/phone-gray.png", alt="")
+                        .form-group 
+                            input.form-control(type="text" required)
+                            label Mã nhân viên tư vấn (nếu có)
+                            .icon 
+                                img(src="./images/icons/heardphone.png", alt="")
+                        .form-group 
+                            select.form-control(type="text")
+                                option(value="") Tỉnh/Thành phố
+                            select.form-control(type="text")
+                                option(value="") Quận/Huyện
+                        .form-group 
+                            textarea.form-control(required)
+                            label Ghi chú (Vd: số tiền/hạn mức,...)
+                            .icon 
+                                img(src="./images/icons/pencile.png", alt="")
+                        .form-check
+                            input#flexCheckDefault.form-check-input(type='checkbox' value='')
+                            label.form-check-label(for='flexCheckDefault') Tôi đồng ý với 
+                                span điều khoản và điều kiện 
+                                |của HDBank
+                        button.btn-login
+                            p Đăng ký ngay
+                .wrap-form_hotline 
+                    .wrap-form_hotline__img 
+                        img.desktop(src="./images/detail-card/singup.png", alt="")
+                        img.mobile(src="./images/detail-card/singup-mb.png", alt="")
+                    .wrap-form_hotline__desc 
+                        .icon 
+                            img(src="./images/detail-card/phone.png", alt="")
+                        .text 
+                            p Gọi ngay 1900 6060 
+                            p Tổng đài HDBank luôn sẵn sàng hỗ trợ bạn 24/7

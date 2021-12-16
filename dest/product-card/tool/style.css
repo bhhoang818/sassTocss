@@ -1,0 +1,117 @@
+.tool-card-product .ultility-tool-card .card-tool-box {
+  width: 100%;
+  position: static;
+}
+.tool-card-product .ultility-tool-card .card-tool-box .card-switcher .panel .from-slide-loan form .form-group:nth-child(1) {
+  margin-bottom: 25px;
+  display: block;
+}
+.tool-card-product .ultility-tool-card .card-tool-box .card-switcher .panel .from-slide-loan form .form-group:nth-child(1) label {
+  padding-bottom: 16px;
+}
+.tool-card-product .ultility-tool-card .card-tool-box .card-switcher .panel .from-slide-loan form .form-group label {
+  font-size: 1.25rem;
+}
+.tool-card-product .ultility-tool-card .card-tool-box .card-switcher .panel .from-slide-loan form .form-group select {
+  padding: 12px 16px 12px 45px;
+  width: 100%;
+  background: #F9FAFC;
+  border-radius: 40px;
+  border: 0;
+  font-size: 20px;
+  line-height: 29px;
+  color: #333;
+}
+.tool-card-product .ultility-tool-card .card-tool-box .card-switcher .panel .from-slide-loan form .form-group #amount-card {
+  width: 125px;
+  text-align: right;
+  margin-left: auto;
+}
+.tool-card-product .ultility-tool-card .card-tool-box .card-switcher .panel .from-slide-loan form .form-group .text {
+  font-size: 16px;
+  line-height: 23px;
+  color: #6F7279;
+}
+.tool-card-product .ultility-tool-card .card-tool-box .card-switcher .panel .from-slide-loan form .range-slider__label__min span, .tool-card-product .ultility-tool-card .card-tool-box .card-switcher .panel .from-slide-loan form .range-slider__label__max span {
+  opacity: 0.5;
+}
+.tool-card-product .ultility-tool-card .card-tool-box .card-switcher .panel .from-slide-loan form .period-wraper .refunded {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  padding: 8px 16px;
+  background: #F9FAFC;
+  border-radius: 40px;
+}
+.tool-card-product .ultility-tool-card .card-tool-box .card-switcher .panel .from-slide-loan form .period-wraper .refunded .cash-refunded {
+  font-size: 24px;
+  line-height: 35px;
+  text-align: center;
+  color: #333;
+}
+.tool-card-product .ultility-tool-card .card-tool-box .card-switcher .panel .from-slide-loan form .period-wraper .refunded .percent-refund {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  line-height: 29px;
+  color: #BCC0CC;
+}
+.tool-card-product .ultility-tool-card .card-tool-box .card-switcher .panel .from-slide-loan form .period-wraper .refunded .cash-refunded,
+.tool-card-product .ultility-tool-card .card-tool-box .card-switcher .panel .from-slide-loan form .period-wraper .refunded .percent-refund {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+@media screen and (max-width: 768.98px) {
+  .tool-card-product .ultility-tool-card {
+    background-image: url("../images/producttion/bg-mb.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 24px 14px;
+  }
+  .tool-card-product .ultility-tool-card .card-tool-box {
+    background: #ffffff;
+  }
+  .tool-card-product .ultility-tool-card .card-tool-box .card-switcher .header-switcher {
+    margin-bottom: 16px;
+  }
+  .tool-card-product .ultility-tool-card .card-tool-box .card-switcher .panel .from-slide-loan form .form-group:nth-child(1) label {
+    padding-bottom: 8px;
+  }
+  .tool-card-product .ultility-tool-card .card-tool-box .card-switcher .panel .from-slide-loan form .form-group label {
+    font-size: 0.875rem;
+  }
+  .tool-card-product .ultility-tool-card .card-tool-box .card-switcher .panel .from-slide-loan form .form-group select {
+    font-size: 1rem;
+  }
+  .tool-card-product .ultility-tool-card .card-tool-box .card-switcher .panel .from-slide-loan form .form-group input#amount-card {
+    font-size: 1.125rem;
+    margin-bottom: 0;
+  }
+  .tool-card-product .ultility-tool-card .card-tool-box .card-switcher .panel .from-slide-loan form .form-group .text {
+    font-size: 0.875rem;
+  }
+  .tool-card-product .ultility-tool-card .card-tool-box .card-switcher .panel .from-slide-loan form .period-wraper .refunded .cash-refunded {
+    font-size: 1.125rem;
+  }
+  .tool-card-product .ultility-tool-card .card-tool-box .card-switcher .panel .from-slide-loan form .period-wraper .refunded .percent-refund {
+    font-size: 0.875rem;
+  }
+}
+@media screen and (max-width: 1024.98px) {
+  .tool-card-product .container {
+    padding: 0 !important;
+  }
+  .tool-card-product .container .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .tool-card-product .container .row > .col,
+.tool-card-product .container .row > [class*=col-] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

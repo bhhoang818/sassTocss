@@ -51,6 +51,7 @@ $tran: transparent
 				transform: translateY(-50%)
 				left: 12%
 				max-width: 957px
+				width: 100%
 				.slide-title
 					margin-bottom: 54px
 					p
@@ -169,12 +170,17 @@ $tran: transparent
 			.swiper-container
 			.slide-inner
 				position: relative
-				padding: 24px
 				background: $white
 				box-shadow: 2px 2px 17px -4px rgba(0, 0, 0, 0.19)
 				border-radius: 20px
 				border: 1px solid $tran
 				transition: all ease-in-out .3s
+				a
+					min-height: 205px
+					display: flex
+					justify-content: space-between
+					flex-direction: column
+					padding: 24px
 				.brand
 					width: max-content
 					padding: 4px 8px
@@ -201,6 +207,11 @@ $tran: transparent
 						font-size: 16px
 						line-height: 23px
 						color: #333333
+						overflow: hidden
+						display: -webkit-box
+						text-overflow: ellipsis
+						-webkit-box-orient: vertical
+						-webkit-line-clamp: 4
 				.date-time
 					span
 						font-weight: 500

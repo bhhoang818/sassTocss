@@ -1,0 +1,87 @@
+.card-product-promotion 
+	h2.title.title_small Ưu đãi sản phẩm thẻ
+	.tag-list.tabs
+		.nav-list
+			ul.tab-list
+				li.active(rel="promotion-1")
+					p Thẻ ghi nợ
+				li(rel="promotion-2")
+					p Ưu đãi
+				li
+					p Thẻ tín dụng
+				li
+					p Thẻ
+				li
+					p Lazada
+				li
+					p Shopee
+				li
+					p Covid-19
+		#promotion-1.list-wrapper.panel.active
+			-for(i=1; i<5; i++)
+				.list-wrapper_item 
+					.list-wrapper_item__img 
+						a(href="")
+							img(src="./images/producttion/promotion-card-"+i+".png", alt="") 
+					.list-wrapper_item__content 
+						.list-wrapper_item__content-title 
+							a(href="")
+								p Cập nhật biểu phí tháng 11
+						.list-wrapper_item__content-desc 
+							p Khách hàng cá nhân đăng ký thành công "Cộng tác viên" và thực hiện giới thiệu khách hàng trên App HDBank...
+						.list-wrapper_item__content-date 
+							p 31/10/2021 
+			nav.productpager
+				ul.pagination
+					li.page-item
+						a.page-link(href='#')
+							img(src="./images/icons/prev.png", alt="")
+					li.page-item
+						a.page-link(href='#')
+							img(src="./images/icons/prev-one.png", alt="")
+					li.page-item
+						a.page-link(href='#') 1
+					li.page-item
+						a.page-link(href='#') 2
+					li.page-item
+						a.page-link(href='#') 3
+					li.page-item
+						a.page-link(href='#')
+							img(src="./images/icons/next-one.png", alt="")
+					li.page-item
+						a.page-link(href='#')
+							img(src="./images/icons/next.png", alt="")
+		#promotion-2.list-wrapper.panel
+			-for(i=1; i<5; i++)
+				.list-wrapper_item 
+					.list-wrapper_item__img 
+						a(href="")
+							img(src="./images/producttion/promotion-card-"+i+".png", alt="") 
+					.list-wrapper_item__content 
+						.list-wrapper_item__content-title 
+							a(href="")
+								p Cập nhật biểu phí tháng 11
+						.list-wrapper_item__content-desc 
+							p Khách hàng cá nhân đăng ký thành công "Cộng tác viên" và thực hiện giới thiệu khách hàng trên App HDBank...
+						.list-wrapper_item__content-date 
+							p 31/10/2021 
+			nav.productpager
+				ul.pagination
+					li.page-item
+						a.page-link(href='#')
+							img(src="./images/icons/prev.png", alt="")
+					li.page-item
+						a.page-link(href='#')
+							img(src="./images/icons/prev-one.png", alt="")
+					li.page-item
+						a.page-link(href='#') 1
+					li.page-item
+						a.page-link(href='#') 2
+					li.page-item
+						a.page-link(href='#') 3
+					li.page-item
+						a.page-link(href='#')
+							img(src="./images/icons/next-one.png", alt="")
+					li.page-item
+						a.page-link(href='#')
+							img(src="./images/icons/next.png", alt="")

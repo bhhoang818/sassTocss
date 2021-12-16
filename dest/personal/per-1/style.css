@@ -1,0 +1,18 @@
+.pro-personal {
+  padding-top: 16px;
+}
+.pro-personal .wrapper-container {
+  max-width: 842px;
+  width: 100%;
+  margin: 0 auto;
+}
+.pro-personal .wrapper-container_content p {
+  text-align: center;
+  font-size: 20px;
+  line-height: 29px;
+}
+@media screen and (max-width: 768.98px) {
+  .pro-personal .wrapper-container_content p {
+    font-size: 14px;
+  }
+}

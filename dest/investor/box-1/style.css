@@ -1,0 +1,43 @@
+.section.investor-content .investor-top-box .tabs-list-category .info-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  height: 80px;
+  background: #FFFFFF;
+  border: 1px solid #BCC0CC;
+  box-sizing: border-box;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 768px) {
+  .section.investor-content .investor-top-box .tabs-list-category .info-box {
+    padding: 8px;
+    height: 48px;
+    border-radius: 12px;
+    margin-bottom: 0;
+  }
+}
+.section.investor-content .investor-top-box .tabs-list-category .info-box .name-category {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 120%;
+  color: #464646;
+}
+@media screen and (max-width: 768px) {
+  .section.investor-content .investor-top-box .tabs-list-category .info-box .name-category {
+    font-size: 0.875rem;
+  }
+}
+.section.investor-content .investor-top-box .tabs-list-category .info-box:hover {
+  background: linear-gradient(259.71deg, #FFDE01 7.83%, #FAA71A 100%);
+}
+@media screen and (max-width: 768px) {
+  .section.investor-content .investor-top-box .tabs-list-category {
+    padding: 0 5.5px;
+  }
+  .section.investor-content .investor-top-box .tabs-list-category .item-category {
+    padding: 5px;
+  }
+}

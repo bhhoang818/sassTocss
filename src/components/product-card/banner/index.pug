@@ -1,0 +1,12 @@
+section.page-banner
+    .swiper-container
+        .swiper-wrapper
+            -for(i=1; i<4; i++)
+                .swiper-slide
+                    .slide-inner.slide-inner_desktop 
+                        .slide-inner__img
+                            img(src="./images/producttion/hero-banner.png", alt="")
+                    .slide-inner.slide-inner_mobile 
+                        .slide-inner__img
+                            img(src="./images/producttion/hero-banner-mb.png", alt="")
+    .swiper-pagination

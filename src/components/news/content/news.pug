@@ -1,0 +1,23 @@
+section.section.news-content
+    .container-fluid 
+        .news-search-box
+            .row
+                .page-title Bản tin HDBank
+                form.group-iput(action="").search-box.text-center
+                    .form-group
+                        input.form-control(type="text" placeholder="Tìm kiếm")
+                        button(type="submit")
+                            em.ri-search-2-line
+        .news-main-content-box.tab-box
+            include ../list-category/index.pug
+            .row
+                .panel.active#panel-1
+                    .main-content
+                        include ../list-news-vertical/index.pug
+                        a.btn-loadmore.btn-show-hide(href="javascript:void(0)") Tải thêm
+                        a.btn-hide.btn-show-hide(href="javascript:void(0)") Ẩn đi
+                .panel#panel-2
+                    .main-content
+                        include ../list-news-vertical/index.pug
+                        a.btn-loadmore.btn-show-hide(href="javascript:void(0)") Tải thêm
+                        a.btn-hide.btn-show-hide(href="javascript:void(0)") Ẩn đi

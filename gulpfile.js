@@ -7,9 +7,11 @@ var pug = require('gulp-pug');
 var watch = require('gulp-watch');
 
 function sassCore() {
-	return gulp.src('src/_core/**.sass')
+	return gulp.src([
+			'!src/components/_core/**.sass',
+			'src/components/**/**.sass'
+		])
 		.pipe(sass().on('error', sass.logError))
-		.pipe(concat('core.css'))
 		.pipe(gulp.dest('dest'));
 };
 

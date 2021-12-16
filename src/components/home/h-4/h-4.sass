@@ -177,15 +177,59 @@ $tran: transparent
 		justify-content: space-between
 		.item
 			width: 84px
-			height: 84px
 			a
-				display: block
+				width: 82px
+				height: 82px
+				border-radius: 28.08px
+				display: flex
+				align-items: center
+				justify-content: center
+				overflow: hidden
+				img
+					transition: all ease-in-out .3s
+					transform: scale(1)
 			p
 				font-size: 16px
 				line-height: 23px
 				text-align: center
 				color: #000000
 				margin-bottom: 0
+			// &:nth-child(1 )
+			// 	a
+			// 		background: radial-gradient(61.67% 61.67% at 42.5% 38.33%, #FFACAC 0%, #FF1332 100%)
+			// 		box-shadow: inset 0px 0px 5.61702px rgba(73, 19, 19, 0.25)
+			// &:nth-child(2 )
+			// 	a
+			// 		background: radial-gradient(61.67% 61.67% at 42.5% 38.33%, #6CD3FF 0%, #0085FF 100%)
+			// 		box-shadow: inset 0px 0px 5.61702px rgba(10, 53, 118, 0.25)
+			// &:nth-child(3 )
+			// 	a
+			// 		background: radial-gradient(61.67% 61.67% at 42.5% 38.33%, #F799FF 0%, #9E0EB6 100%)
+			// 		box-shadow: inset 0px 0px 5.61702px rgba(118, 43, 10, 0.25)
+			// &:nth-child(4 )
+			// 	a
+			// 		background: radial-gradient(61.67% 61.67% at 42.5% 38.33%, #ACFFF5 0%, #13D2BB 100%)
+			// 		box-shadow: inset 0px 0px 5.61702px rgba(62, 62, 62, 0.25)
+			// &:nth-child(5 )
+			// 	a
+			// 		background: radial-gradient(61.67% 61.67% at 42.5% 38.33%, #CBF3FF 0%, #65D3F7 100%)
+			// 		box-shadow: inset 0px 0px 5.61702px rgba(118, 43, 10, 0.25)
+			// &:nth-child(6 )
+			// 	a
+			// 		background: radial-gradient(61.67% 61.67% at 42.5% 38.33%, #F6FFC1 0%, #96CA04 100%)
+			// 		box-shadow: inset 0px 0px 5.61702px rgba(77, 118, 10, 0.25)
+			// &:nth-child(7 )
+			// 	a
+			// 		background: radial-gradient(61.67% 61.67% at 42.5% 38.33%, #FFCF6C 0%, #FF7A00 100%)
+			// 		box-shadow: inset 0px 0px 5.61702px rgba(118, 43, 10, 0.25)
+			// &:nth-child(8 )
+			// 	a
+			// 		background: radial-gradient(61.67% 61.67% at 42.5% 38.33%, #FFCCE1 0%, #FF1469 100%)
+			// 		box-shadow: inset 0px 0px 5.61702px rgba(151, 1, 73, 0.25)
+			// &:nth-child(9 )
+			// 	a
+			// 		background: radial-gradient(61.67% 61.67% at 42.5% 38.33%, #FEFFB5 0%, #FFC700 100%)
+			// 		box-shadow: inset 0px 0px 5.61702px rgba(118, 43, 10, 0.25)
 	.btn-viewmore
 		margin: 0 auto
 		position: relative
@@ -209,6 +253,14 @@ $tran: transparent
 		&:hover
 			&::after
 				transform: rotate(-25deg)
+	@media screen and ( min-width: 1025px )
+		.list-item
+			.item
+				&:hover
+					a
+						img
+							transform: scale(1.175)
+
 	@media screen and ( max-width: 1199.98px )
 		.comparny-image
 			height: 100%

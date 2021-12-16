@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@900&display=swap')
+$black: #333
+$main: #F00020
+$body: #ffffff
+$white: #ffffff
+$gray: #B6BEC8
+$yellow: #FFD643
+$pink: #FF8B9B
+$pink-2: #FFA6C6
+$yellow-2: #FFCF6C
+$purple: #A8A0FF
+$blue-1: #62E4F2
+$blue-2: #87D4FF
+$green: #C3E57A
+$orange: #FF9854
+$opacity: rgba($color: $main, $alpha: .6)
+$gradient: linear-gradient(167.6deg, #FFD149 7.65%, #E0242C 71.52%, #CB0817 89.4%)
+$tran: transparent
+@function r($size)
+	@return ($size/16px)*1rem
+=img-ratio($ratio,$fit:cover)
+	position: relative
+	display: block
+	overflow: hidden
+	padding-top: $ratio *100%
+	img,iframe,video
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: $fit
+		transition: .3s ease-in-out all
+.page404
+	padding-top: 150px
+	padding-bottom: 150px
+	.page-container
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		.page-title
+			text-align: center
+			h1
+				background-image: linear-gradient(to bottom, rgba(255, 209, 73, 1) 0%, rgba(224, 36, 44, 1) 50%, rgba(203, 8, 23, 1) 100%)
+				-webkit-background-clip: text
+				background-clip: text
+				color: transparent
+				font-weight: 800
+				font-size: 128px
+				line-height: 194px
+				letter-spacing: 0.105em
+				transform: matrix(1, 0, 0.03, 1, 0, 0)
+				font-family: Prompt
+			h2
+				font-weight: bold
+				font-size: 48px
+				line-height: 70px
+				text-align: center
+				text-transform: uppercase
+				background-image: linear-gradient(to bottom, rgba(255, 209, 73, 1) 0%, rgba(224, 36, 44, 1) 50%, rgba(203, 8, 23, 1) 100%)
+				-webkit-background-clip: text
+				background-clip: text
+				font-family: Prompt
+				color: transparent
+		.page-desc
+			padding: 0 37px
+			margin-top: 48px
+			text-align: center
+			p
+				font-weight: 500
+				font-size: 24px
+				line-height: 35px
+				text-align: center
+				color: #6F7279
+			.btn-login
+				margin: 48px auto
+				width: 192px
+				height: 58px
+				padding: 0 !important
+				display: flex
+				align-items: center
+				justify-content: center
+				p
+					font-weight: bold
+					font-size: 18px
+					line-height: 26px
+					color: #333333
+				&:hover
+					p
+						color: $white
+	@media screen and ( max-width: 575.98px )
+		padding: 128px 0
+		.page-container
+			.page-title
+				h1
+					font-size: 68px
+					line-height: 103px
+				h2
+					font-size: 24px
+					line-height: 35px
+			.page-desc
+				p
+					font-size: 1rem
+					line-height: 23px
+				.btn-login
+					margin-top: 32px
+					width: 158px
+					height: 44px
+					font-size: 18px
+					line-height: 26px
+					&::after
+						display: none
+					p
+						margin-left: 0
